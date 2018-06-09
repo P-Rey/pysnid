@@ -6,10 +6,17 @@ Created on Tue May 22 09:34:07 2018
 """
 import numpy as np
 
-import matplotlib.pyplot as plt
-
 def region_blocked(data_wave, data_flux, temp_wave, temp_flux):
-##############################setting limits and initialising arrays###################################    
+    
+    ###############################################################################################
+    #                                                                                             #
+    #   this sets limits based on start and end points and it also finds the overlap value lap.   #
+    #   The function rebins this into a new array and also cuts out any zeros at either end       #
+    #                                                                                             #
+    ###############################################################################################
+    
+    ##############################setting limits and initialising arrays########################### 
+    
     N = int(len(data_wave))
     Nt = int(len(temp_wave))
     
@@ -20,7 +27,8 @@ def region_blocked(data_wave, data_flux, temp_wave, temp_flux):
     index_m = np.zeros(Nt)
     index_n = np.zeros(N)
     
-##############################assign the start and end points##########################################
+    ##############################assign the start and end points##################################
+    
     if temp_wave[0] >= data_wave[0]:
         start = temp_wave[0]
     else:
@@ -29,11 +37,15 @@ def region_blocked(data_wave, data_flux, temp_wave, temp_flux):
         end = data_wave[-1]
     else:
         end = temp_wave[-1]
-##############################find lap###################################################
+        
+    ####################################find lap###################################################
+    
     start_n = np.exp(start)
     end_n = np.exp(end)
     lap=abs(np.log(end_n/start_n))
-############
+    
+    ######################################rebinning################################################
+    
     for i in range(0,N):
         if data_wave[i] >= start:
             data_wave_reg[i] = data_wave[i]
@@ -51,7 +63,9 @@ def region_blocked(data_wave, data_flux, temp_wave, temp_flux):
     for l in range(0,N):
         if data_wave_reg[l] != 0:
             data_flux_reg[l] = data_flux[l]
-    
+
+    #########################deleting zeros at the ends of the new arrays##########################
+
     for n in range(0,N):
         if data_wave_reg[n] == 0:
             index_n[n]=n        
@@ -68,28 +82,32 @@ def region_blocked(data_wave, data_flux, temp_wave, temp_flux):
     return data_wave_reg, data_flux_reg, temp_wave_reg, temp_flux_reg, lap
 
 def interp_spec(wave_data, flux_data):
+    
+    ###################################################################
+    #   interpolates any 2 arrays into a new array of length 1024*7   #
+    #           because that was found to maximise r                  #
+    ###################################################################
+    
     from scipy import interpolate
     f = interpolate.interp1d(wave_data, flux_data)
     n = wave_data[0]
     m = wave_data[-1]
     x = np.linspace(n, m, 1024*7)
     f_d = f(x)
+    
     return f_d
 
 def get_r_value(wave_data, flux_data, temp_wave, temp_flux, h):
+    
+    #####################################################################################
+    #                                                                                   #
+    #             a function that takes the spectrum. determines the peak               #
+    #           and the rms antisymetrical function of the correlation curve            #
+    #                  uses these to find r the correlation coefficient                 #
+    #                                                                                   #    
+    #####################################################################################
+    
     from cross_corr import interp_spec
-#    from scipy import interpolate
-#    f = interpolate.interp1d(wave_data, flux_data)
-#    n = wave_data[0]
-#    m = wave_data[-1]
-#    x = np.linspace(n, m, 1024*7)
-#    f_d = f(x)
-#    
-#    f1 = interpolate.interp1d(temp_wave, temp_flux)
-#    n1 = temp_wave[0]
-#    m1 = temp_wave[-1]
-#    x1 = np.linspace(n1, m1, 1024*7)
-#    f_t = f1(x1)
     
     f_d = interp_spec(wave_data, flux_data)
     f_t = interp_spec(temp_wave, temp_flux)
@@ -115,10 +133,21 @@ def get_r_value(wave_data, flux_data, temp_wave, temp_flux, h):
 
 
 def get_correlate(data_wave, filteredflux_data, temp_wave, filteredflux_temp):
+    
+    #############################################################
+    #                                                           #
+    #   finds the correlation beteern two spectra, fins their   # 
+    #   correlation coefficients, calls get_r_value to do so    #
+    #   calls region_blocked aswell to find lap                 #
+    #                                                           #
+    #############################################################
+    
     import scipy.fftpack as fft
+    
     '''
     SORT OUT THE R COEFFICIENT, STILL TOO LOW. LOOK INTO THE NORMALISATION
     '''
+   
     wave_data, flux_data, temp_wave, temp_flux, lap = region_blocked(data_wave, filteredflux_data, temp_wave, filteredflux_temp)
     try:
         dft_data = fft.fft(flux_data)
@@ -126,30 +155,31 @@ def get_correlate(data_wave, filteredflux_data, temp_wave, filteredflux_temp):
         
         rmsInput = np.std(dft_data)
         rmsTemp = np.std(dft_temp)
-#        
-#        autocorr = np.correlate(temp_flux, temp_flux, "full")
-#        autocorr = ((1/len(autocorr)*rmsTemp*rmsTemp)*autocorr)
         
         Corr = np.correlate(flux_data, temp_flux, "full")
         Corr = (1. / len(Corr) * rmsInput * rmsTemp) * Corr
         h = max(Corr)
         r = get_r_value(wave_data, flux_data, temp_wave, temp_flux, h)
         rlap=r*lap
-#        print("r",r)
-#        print("lap",lap)
-#        print("rlap",rlap)
+
     except ValueError:
         r = 0
         rlap = 0
-#        print("fuck OOP")
-#        plt.plot(r,rlap)
+        
     return lap
 
 def correlate(data_wave, filteredflux_data, temp_wave, filteredflux_temp):
+    
+    ################################################################################################    
+    #                                                                                              #
+    #   This function loops through many redshifts, calls rbl from redshift.py and get_correlate   #
+    #                                                                                              #
+    ################################################################################################
+
     from redshift import red_boi_loop as rbl
     
     r_list = []
-       
+      
     for i in range(0,300):
         wave_shift = rbl(temp_wave,i)
         r = get_correlate(data_wave, filteredflux_data, wave_shift, filteredflux_temp)

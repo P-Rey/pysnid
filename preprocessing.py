@@ -5,6 +5,14 @@ Created on Thu May 17 16:04:41 2018
 @author: Peter
 """
 
+################################################################################
+#                                                                              #
+#   @Morgan this is all for filtering and processing the spectra               #
+#   I'm confident its accurate and each function is pretty self explainitory   # 
+#   let me know if you need anything clarified                                 #
+#                                                                              #
+################################################################################
+
 import numpy as np
 
 def Apodize(flux,wave):
@@ -48,12 +56,11 @@ def Filter(ProcessedSig):
         dft[i]=0
 
     filtered_sig = fft.ifft(dft)
-#    filtered_sig = filtered_sig/max(filtered_sig)
+
     return filtered_sig
 
 def Process(ln_wave,ln_flux):
     SplinedSignal = Apodize(ln_flux,ln_wave)
     processedsig = Hann(SplinedSignal, 0.05)
-    filtered_sig = Filter(processedsig) 
-#    filtered_sig = (filtered_sig - min(filtered_sig)) / (max(filtered_sig) - min(filtered_sig))                                                                  
+    filtered_sig = Filter(processedsig)                                                                  
     return filtered_sig

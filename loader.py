@@ -9,6 +9,13 @@ import numpy as np
 import pandas as pd
 
 def Load(filename):
+    
+    #########################################
+    #                                       #
+    #   loads and Normalises  the spectra   #
+    #                                       #
+    #########################################
+    
     '''
     Clean this up and make it more consistent
     '''
@@ -23,10 +30,15 @@ def Load(filename):
     ln_flux = (ln_flux - min(ln_flux)) / (max(ln_flux) - min(ln_flux))  
     
     return wave, flux, ln_wave, ln_flux, n
-####################################################
 
 def ln_bin_wave_consts(wave):
-
+    
+    ##############################################
+    #                                            #
+    #   Gets the constants from the wave array   #
+    #                                            #
+    ##############################################
+    
     l0=wave[0]
     l1=wave[-1]
     N=len(wave)
@@ -43,13 +55,15 @@ def ln_bin_wave_consts(wave):
     
     return n, ln_wave, dl_ln, N, l0
 
-####################################################
-#                                                  #
-#                 From apodize.f                   #  
-#                                                  #
-####################################################
 
 def ln_bin_flux(wave, flux,N,l0,dl_ln):
+    
+    ####################################################
+    #                                                  #
+    #                 From apodize.f                   #  
+    #                                                  #
+    ####################################################
+
     '''
     can this be vecotrised?
     '''

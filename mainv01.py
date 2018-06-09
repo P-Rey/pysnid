@@ -4,6 +4,19 @@ Created on Wed May 30 12:02:01 2018
 
 @author: Peter
 """
+
+############################################################################################
+#                                                                                          #
+#   @Morgan okay this is v. messy. Essentially I'm calling                                 #
+#   Load                                                                                   #
+#   >>wave04, flux04, ln_wave04, ln_flux04, n04 = ld("2004et_20041027_3299_9327_00.dat")   #
+#   Process                                                                                #
+#   >>filtered_flux04 = pr(ln_wave04,ln_flux04)                                            #
+#   correlate                                                                              #
+#   >>r = cr(ln_wave04, filtered_flux04,ln_wave04z_half, filtered_flux04)                  # 
+#   for every array in order to find how well they correlate to one another                #
+#                                                                                          #
+############################################################################################
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
