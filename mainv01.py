@@ -24,6 +24,7 @@ import pandas as pd
 #from preprocessing import Process as pr
 import loader
 import preprocessing
+import cross_corr
 #################################################################################################
 ld=loader.Loader()
 
@@ -36,6 +37,8 @@ wave,flux,ln_wave,ln_flux,N = Loadin("2004et_20041027_3299_9327_00.dat")
 percent = 0.5
 pr = preprocessing.Preproccess(wave,flux,percent)
 filtered_sig = pr.Filter()
+cr = cross_corr.Correlate(ln_wave,ln_wave,ln_flux,ln_flux)
+r_list = cr.correlate()
 #wave04, flux04, ln_wave04, ln_flux04, n04 =           ld.Load("2004et_20041027_3299_9327_00.dat")
 #wave04p1, flux04p1, ln_wave04p1, ln_flux04p1, n04p1 = ld("d2004et_20041027_3299_9327_00_0p1.dat")
 #wave04p2, flux04p2, ln_wave04p2, ln_flux04p2, n04p2 = ld("d2004et_20041027_3299_9327_00_0p2.dat")
