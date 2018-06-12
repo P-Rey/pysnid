@@ -8,87 +8,87 @@ Created on Mon May 28 15:28:32 2018
 import numpy as np
 import pandas as pd
 
-def Load(filename):
-    
-    #########################################
-    #                                       #
-    #   loads and Normalises  the spectra   #
-    #                                       #
-    #########################################
-    
-    '''
-    Clean this up and make it more consistent
-    '''
-    data = np.loadtxt(filename)
-    data1 = pd.DataFrame(data)
-    wave = data1.loc[:, 0]
-    flux = data1.loc[:, 1]
-    wave=np.asarray(wave)
-    flux = np.asarray(flux)
-    n,ln_wave,dl_ln, N, l0 = ln_bin_wave_consts(wave)
-    ln_flux = ln_bin_flux(wave,flux, N, l0,dl_ln)
-    ln_flux = (ln_flux - min(ln_flux)) / (max(ln_flux) - min(ln_flux))  
-    
-    return wave, flux, ln_wave, ln_flux, n
-
-def ln_bin_wave_consts(wave):
-    
-    ##############################################
-    #                                            #
-    #   Gets the constants from the wave array   #
-    #                                            #
-    ##############################################
-    
-    l0=wave[0]
-    l1=wave[-1]
-    N=len(wave)
-
-    A = N / np.log(l1/l0)
-
-    B = -N * (np.log(l0)/np.log(l1/l0))
-
-    dl_ln = np.log(l1/l0) / N 
-    ln_wave = np.log(wave)
-
-    n= []
-    n[:] = [A * np.log(element) + B for element in wave]
-    
-    return n, ln_wave, dl_ln, N, l0
-
-
-def ln_bin_flux(wave, flux,N,l0,dl_ln):
-    
-    ####################################################
-    #                                                  #
-    #                 From apodize.f                   #  
-    #                                                  #
-    ####################################################
-
-    '''
-    can this be vecotrised?
-    '''
-    ln_flux = np.zeros(N)
-    for i in range(0,N):
-        if i == 0:
-            s0 = 0.5 * (3 * wave[i] - wave[i + 1])
-            s1 = 0.5 * (wave[i] + wave[i + 1])
-        elif i == len(wave) - 1:
-            s0 = 0.5 * (wave[i - 1] + wave[i])
-            s1 = 0.5 * (3 * wave[i] - wave[i - 1])
-        else:
-            s0 = 0.5 * (wave[i - 1] + wave[i])
-            s1 = 0.5 * (wave[i] + wave[i + 1])
-            
-        ln_s0= np.log(s0 / l0) / dl_ln + 1
-        ln_s1 = np.log(s1 / l0) / dl_ln + 1
-        dnu = s1 - s0
+class Loader(object):
+    def Load(self, filename):
         
-        for j in range(int(ln_s0), int(ln_s1)):
-            if j < 0 or j >= N:
-                continue
-            flux_ = flux[i] / (ln_s1 - ln_s0) * dnu
-            ln_flux[j] = ln_flux[j] + flux_
-    return ln_flux
+        #########################################
+        #                                       #
+        #   loads and Normalises  the spectra   #
+        #                                       #
+        #########################################
+        
+        '''
+        Clean this up and make it more consistent
+        '''
+        data = np.loadtxt(filename)
+        data1 = pd.DataFrame(data)
+        wave = data1.loc[:, 0]
+        flux = data1.loc[:, 1]
+        wave=np.asarray(wave)
+        flux = np.asarray(flux)
+
+        return wave, flux
+
+class Binning(object):
+    def __init__(self, wave):
+        
+        ##############################################
+        #                                            #
+        #   Gets the constants from the wave array   #
+        #                                            #
+        ##############################################
+        
+        self.l0=wave[0]
+        self.l1=wave[-1]
+        self.N=len(wave)
+        
+        self.l10 = self.l1/self.l0
+        self.A = self.N / np.log(self.l10)
+        
+        self.B = -self.N * (np.log(self.l0)/np.log(self.l10))
+    
+        self.dl_ln = np.log(self.l10) / self.N 
+        self.ln_wave = np.log(wave)
+    
+        self.n= []
+        self.n[:] = [self.A * np.log(element) + self.B for element in wave]
+    
+    
+    def ln_bin_flux(self, wave, flux):
+        
+        ####################################################
+        #                                                  #
+        #                 From apodize.f                   #  
+        #                                                  #
+        ####################################################
+    
+        '''
+        can this be vecotrised?
+        '''
+        ln_flux = np.zeros(self.N)
+        for i in range(0,self.N):
+            if i == 0:
+                s0 = 0.5 * (3 * wave[i] - wave[i + 1])
+                s1 = 0.5 * (wave[i] + wave[i + 1])
+            elif i == len(wave) - 1:
+                s0 = 0.5 * (wave[i - 1] + wave[i])
+                s1 = 0.5 * (3 * wave[i] - wave[i - 1])
+            else:
+                s0 = 0.5 * (wave[i - 1] + wave[i])
+                s1 = 0.5 * (wave[i] + wave[i + 1])
+                
+            ln_s0= np.log(s0 / self.l0) / self.dl_ln + 1
+            ln_s1 = np.log(s1 / self.l0) / self.dl_ln + 1
+            dnu = s1 - s0
+            
+            for j in range(int(ln_s0), int(ln_s1)):
+                if j < 0 or j >= self.N:
+                    continue
+                flux_ = flux[i] / (ln_s1 - ln_s0) * dnu
+                ln_flux[j] = ln_flux[j] + flux_
+        ln_flux = (ln_flux - min(ln_flux)) / (max(ln_flux) - min(ln_flux))
+        return ln_flux, self.ln_wave, self.N
+
 
 
 #################################################################################
