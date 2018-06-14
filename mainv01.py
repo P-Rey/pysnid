@@ -17,14 +17,15 @@ Created on Wed May 30 12:02:01 2018
 #   for every array in order to find how well they correlate to one another                #
 #                                                                                          #
 ############################################################################################
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
+#import matplotlib.pyplot as plt
+#import numpy as np
+#import pandas as pd
 
 #from preprocessing import Process as pr
 import loader
 import preprocessing
-import cross_corr
+import Correlate
+#import cross_corr
 #################################################################################################
 ld=loader.Loader()
 
@@ -33,12 +34,32 @@ def Loadin(filename):
     bn = loader.Binning(wave)
     ln_flux,ln_wave,N = bn.ln_bin_flux(wave,flux)   
     return wave,flux,ln_wave,ln_flux,N
+
 wave,flux,ln_wave,ln_flux,N = Loadin("2004et_20041027_3299_9327_00.dat")
-percent = 0.5
-pr = preprocessing.Preproccess(wave,flux,percent)
-filtered_sig = pr.Filter()
-cr = cross_corr.Correlate(ln_wave,ln_wave,ln_flux,ln_flux)
-r_list = cr.correlate()
+wavep01,fluxp01,ln_wavep01,ln_fluxp01,Np01 = Loadin("sn2011fe_0928_all_cor.txt")
+
+
+def Preprommm(wave,flux):
+    percent = 0.5
+    pr = preprocessing.Preproccess(wave,flux,percent)
+    filtered_sig = pr.Filter()
+    return filtered_sig
+
+filtered_sig = Preprommm(wave,flux)
+filtered_sigp01 = Preprommm(wavep01, fluxp01)
+
+def Correl8(usrinput,template):
+    corr = Correlate.Correlate(usrinput, template)
+    correl, h = corr.get_corr()
+    r = corr.get_r()
+    lap = corr.get_lap()
+    print("r", r)
+    print("lap", lap)
+    rlap = r * lap
+    return rlap
+rlap = Correl8(filtered_sig, filtered_sigp01)
+#cr = cross_corr.Correlate(ln_wave,ln_wave,ln_flux,ln_flux)
+#r_list = cr.correlate()
 #wave04, flux04, ln_wave04, ln_flux04, n04 =           ld.Load("2004et_20041027_3299_9327_00.dat")
 #wave04p1, flux04p1, ln_wave04p1, ln_flux04p1, n04p1 = ld("d2004et_20041027_3299_9327_00_0p1.dat")
 #wave04p2, flux04p2, ln_wave04p2, ln_flux04p2, n04p2 = ld("d2004et_20041027_3299_9327_00_0p2.dat")
