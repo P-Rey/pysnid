@@ -5,6 +5,7 @@ Created on Tue May 22 09:34:07 2018
 @author: Peter
 """
 import numpy as np
+import matplotlib.pyplot as plt
 class Correlate(object):
     def __init__(self, data_wave, temp_wave, flux_data, temp_flux):
         ##############################setting limits and initialising arrays###########################
@@ -13,11 +14,12 @@ class Correlate(object):
         self.data_wave = data_wave
         self.temp_wave = temp_wave
         self.N = int(len(self.data_wave))
+        print("n",self.N)
         self.Nt = int(len(self.temp_wave))
-        self.data_wave_reg = np.zeros(self.N) 
-        self.temp_wave_reg = np.zeros(self.Nt)
+        self.data_wave_reg = [0] * self.N 
+        self.temp_wave_reg = np.zeros(self.Nt+1)
         self.data_flux_reg = np.zeros(self.N)
-        self.temp_flux_reg = np.zeros(self.Nt)
+        self.temp_flux_reg = np.zeros(self.Nt+1)
         self.index_m = np.zeros(self.Nt)
         self.index_n = np.zeros(self.N)
         
@@ -33,31 +35,30 @@ class Correlate(object):
         ##############################assign the start and end points##################################
         
         if wave_shift[0] >= self.data_wave[0]:
-            start = wave_shift[0]
+            self.start = wave_shift[0]
         else:
-            start = self.data_wave[0]
+            self.start = self.data_wave[0]
         if wave_shift[-1] >= self.data_wave[-1]:
-            end = self.data_wave[-1]
+            self.end = self.data_wave[-1]
         else:
-            end = wave_shift[-1]
+            self.end = wave_shift[-1]
             
-        ####################################find lap###################################################
-        print("start",start)
-        print("end",end)
-        start_n = np.exp(start)
-        end_n = np.exp(end)
-        self.lap=abs(np.log(end_n/start_n))
-        
+        self.lap=self.lap_()
+       
         ######################################rebinning################################################
+
         try:
-            for i in range(0,self.N):
-                if self.data_wave[i] >= start:
-                    ############ NEED TO BUG HERE FIX HERE  13/06 ################################
+            if self.data_wave[0] > self.start:
+                for i in range(0,self.N):
+    
                     self.data_wave_reg[i] = self.data_wave[i]
                     self.data_flux_reg[i] = self.flux_data[i]
                     
-            for j in range(0,self.Nt):
-                if np.any(wave_shift[j] >=start) and np.any(wave_shift[j] <= end):
+            
+            if wave_shift[0] >=self.start and wave_shift[0] <= self.end:
+                print("1",len(self.temp_wave_reg))
+                print("2",len(wave_shift))  
+                for j in range(0,self.Nt):    
                     self.temp_wave_reg[j] = wave_shift[j]
                     self.temp_flux_reg[j] = self.temp_flux[j]
             
@@ -70,21 +71,36 @@ class Correlate(object):
                     self.data_flux_reg[l] = self.flux_data[l]
         
         #########################deleting zeros at the ends of the new arrays##########################
-        for n in range(0,self.N):
-            if self.data_wave_reg[n] == 0:
-                self.index_n[n]=n        
-        
-        for m in range(0,self.Nt):
-            if self.temp_wave_reg[m] == 0:
-                self.index_m[m]=m   
-    
-        self.data_flux_reg = np.delete(self.data_flux_reg, self.index_n)
-        self.data_wave_reg = np.delete(self.data_wave_reg, self.index_n)
-        self.temp_flux_reg = np.delete(self.temp_flux_reg, self.index_m)
-        self.temp_wave_reg = np.delete(self.temp_wave_reg, self.index_m)
+            for n in range(0,self.N):
+                if self.data_wave_reg[n] == 0:
+                    self.index_n[n]=n        
+                
+            for m in range(0,self.Nt):
+                if self.temp_wave_reg[m] == 0:
+                    self.index_m[m]=m   
+            plt.plot(self.index_n)
+            plt.figure()
+            plt.plot(self.index_m)
+#            plt.plot( self.data_wave_reg, self.data_flux_reg, self.temp_wave_reg,self.temp_flux_reg)
+#            plt.figure()
+            
+            self.data_wave_reg = np.delete(self.data_wave_reg, self.index_n)
+            self.data_flux_reg = np.delete(self.data_flux_reg, self.index_n)
+            
+            self.temp_wave_reg = np.delete(self.temp_wave_reg, self.index_m)
+            self.temp_flux_reg = np.delete(self.temp_flux_reg, self.index_m)
+            
+            #plt.plot( self.data_wave_reg, self.data_flux_reg, self.temp_wave_reg,self.temp_flux_reg)
         except IndexError:
-            print("IndexError: ya fucked up")     
+            print("AHHHHHHHHH")
         return self.data_wave_reg, self.data_flux_reg, self.temp_wave_reg, self.temp_flux_reg, self.lap
+   
+    def lap_(self):
+        ####################################find lap###################################################
+        start_n = np.exp(self.start)
+        end_n = np.exp(self.end)
+        self.lap=abs(np.log(end_n/start_n))
+        return self.lap
     
     def interp_spec(self):
         
@@ -157,21 +173,21 @@ class Correlate(object):
         '''
        
         wave_data, flux_data, temp_wave, temp_flux, lap = self.region_blocked(wave_shift)
-        try:
-            dft_data = fft.fft(flux_data)
-            dft_temp = fft.fft(temp_flux)
-            
-            rmsInput = np.std(dft_data)
-            rmsTemp = np.std(dft_temp)
-            
-            Corr = np.correlate(flux_data, temp_flux, "full")
-            Corr = (1. / len(Corr) * rmsInput * rmsTemp) * Corr
-            h = max(Corr)
-            r = self.get_r_value(h)
-            rlap=r*lap
+        plt.figure()
+        plt.plot( wave_data, flux_data, temp_wave, temp_flux)
+#        dft_data = fft.fft(flux_data)
+#        dft_temp = fft.fft(temp_flux)
+#        
+#        rmsInput = np.std(dft_data)
+#        rmsTemp = np.std(dft_temp)
+        
+        Corr = np.correlate(flux_data, temp_flux, "full")
+#        Corr = (1. / len(Corr) * rmsInput * rmsTemp) * Corr
+        h = max(Corr)
+        r = self.get_r_value(h)
+        rlap=r*lap
     
-        except ValueError:
-            rlap = 0
+#            rlap = 0
             
         return rlap
     

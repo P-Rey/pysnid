@@ -37,8 +37,9 @@ def Loadin(filename):
 
 wave,flux,ln_wave,ln_flux,N = Loadin("2004et_20041027_3299_9327_00.dat")
 wavep01,fluxp01,ln_wavep01,ln_fluxp01,Np01 = Loadin("sn2011fe_0928_all_cor.txt")
-
-
+#plt.plot(ln_wave,ln_flux,ln_wavep01,ln_fluxp01)
+"1999em_19991119_3292_10074_00.dat"
+"sn2011fe_0928_all_cor.txt"
 def Preprommm(wave,flux):
     percent = 0.5
     pr = preprocessing.Preproccess(wave,flux,percent)
@@ -48,16 +49,25 @@ def Preprommm(wave,flux):
 filtered_sig = Preprommm(wave,flux)
 filtered_sigp01 = Preprommm(wavep01, fluxp01)
 
-def Correl8(usrinput,template):
-    corr = Correlate.Correlate(usrinput, template)
-    correl, h = corr.get_corr()
+def Correl8(usrwave, usrinput,templatewave,template):
+    corr = Correlate.Correlate(usrwave, usrinput, templatewave, template)
+#    new_wave, reggie, new_wave_temp, bush = corr.region()
+#    print(usrwave[0], usrwave[-1])
+#    print(new_wave[0],new_wave[-1])
+#    print(templatewave[0], templatewave[-1])
+#    print(new_wave_temp[0],new_wave_temp[-1])
+    correl, h, lap = corr.get_corr()
+    plt.plot(correl)
+    plt.figure()
     r = corr.get_r()
-    lap = corr.get_lap()
+#    lap = corr.get_lap()
     print("r", r)
     print("lap", lap)
     rlap = r * lap
     return rlap
-rlap = Correl8(filtered_sig, filtered_sigp01)
+rlap = Correl8(wave, filtered_sig, wavep01, filtered_sigp01)
+#plt.figure()
+#plt.plot(interp)
 #cr = cross_corr.Correlate(ln_wave,ln_wave,ln_flux,ln_flux)
 #r_list = cr.correlate()
 #wave04, flux04, ln_wave04, ln_flux04, n04 =           ld.Load("2004et_20041027_3299_9327_00.dat")
