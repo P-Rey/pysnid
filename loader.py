@@ -18,7 +18,7 @@ class Loader(object):
         #########################################
         
         '''
-        Clean this up and make it more consistent
+        Clean this up and make it more consistent. Also why am I using DataFrame here, what is it good for?
         '''
         data = np.loadtxt(filename)
         data1 = pd.DataFrame(data)

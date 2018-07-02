@@ -7,6 +7,7 @@ Created on Thu Jun 14 13:13:40 2018
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.fftpack as fft
+
 class Correlate():
     def __init__(self, usrwave, usr, templatewave, temp):
         self.usrinput = usr
