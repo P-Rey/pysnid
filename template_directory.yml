@@ -1,0 +1,2841 @@
+group_quants:
+    pixels:1024
+    l0:2500.00
+    l1:20000.00
+
+supernova_1:
+    label:'sn1979C'
+    type:'II'
+    subtype:'L'
+#    age:9.949
+#        10.943
+#        12.933
+#        42.779
+#        71.630
+supernova_2:
+    label:'sn1980K'
+    type:'II'
+    subtype:'L'
+#    age:6.999
+#        8.999
+#        10.999
+#        11.999
+#        40.996
+#        43.996
+#        65.993
+supernova_3:
+    label:'sn1981B'
+    type:'Ia'
+    subtype:'norm'
+#    age:-1.530
+#        15.363
+#        18.344
+#        22.319
+#        26.294
+#        33.250
+#        92.873
+#        113.741
+#        266.774
+supernova_4:
+    label:'sn1983N'
+    type:'Ib'
+    subtype:'norm'
+#    age:3.993
+#        11.980
+#        227.622
+supernova_5:
+    label:'sn1983V'
+    type:'Ic'
+    subtype:'norm'
+#    age:-8.957
+#        -6.966
+#        -3.981
+#        3.981
+#        11.942
+#        12.938
+#        13.933
+#        14.928
+#        16.919
+#        17.914
+#        37.818
+supernova_6:
+    label:'sn1984A'
+    type:'Ia'
+    subtype:'norm'
+#    age:-6.984
+#        -6.704
+#        -5.873
+#        -4.873
+#        -2.842
+#        8.105
+#        17.050
+#        19.051
+#        26.155
+#        54.921
+supernova_7:
+    label:'sn1984L'
+    type:'Ib'
+    subtype:'norm'
+#    age:7.959
+#        8.954   
+#        11.939   
+#        12.934   
+#        27.858   
+#        31.838   
+#        36.813   
+#        37.808   
+#        38.803   
+#        56.711   
+#        69.645   
+#        70.640
+supernova_8:
+    label:'sn1986G'
+    type:'Ia'
+    subtype:'91bg'
+#    age:-4.721   
+#        -3.723   
+#        -3.025   
+#        -2.725   
+#        -2.226   
+#        -1.228   
+#        -0.729   
+#        -0.230    
+#        0.270    
+#        0.769    
+#        1.268   
+#        20.732   
+#        21.730   
+#        22.729  
+#        31.712   
+#        41.195   
+#        44.190   
+#        45.188   
+#        49.181   
+#        51.676   
+#        53.672   
+#        54.171   
+#        55.669   
+#        56.168   
+#        89.607  
+#        102.583  
+#        256.304  
+#        323.182 
+supernova_9:
+    label:'sn1987A'
+    type:'II'
+    subtype:'pec'
+#    age:-82.731  
+#        -82.431  
+#        -80.763  
+#        -80.543  
+#        -79.724  
+#        -79.554  
+#        -78.814  
+#        -78.535  
+#        -77.805  
+#        -77.546  
+#        -76.816  
+#        -76.567  
+#        -75.717  
+#        -75.587  
+#        -74.778  
+#        -73.529  
+#        -72.770  
+#        -72.590  
+#        -71.801  
+#        -71.611  
+#        -70.772  
+#        -70.612  
+#        -69.763  
+#        -69.603  
+#        -68.614  
+#        -67.605  
+#        -66.616  
+#        -65.597  
+#        -64.828  
+#        -64.558  
+#        -63.549  
+#        -62.590  
+#        -61.551  
+#        -60.582  
+#        -59.573  
+#        -58.813  
+#        -58.584  
+#        -57.625  
+#        -54.857  
+#        -53.589  
+#        -52.819  
+#        -52.639 
+#        -51.880  
+#        -51.630  
+#        -50.841  
+#        -50.621  
+#        -49.622  
+#        -48.633  
+#        -47.634  
+#        -46.635  
+#        -45.886  
+#        -45.656  
+#        -44.867  
+#        -44.647  
+#        -43.848  
+#        -43.638  
+#        -42.649 
+#        -41.880  
+#        -41.640  
+#        -40.651  
+#        -39.622  
+#        -38.633  
+#        -37.844  
+#        -37.604  
+#        -36.635  
+#        -35.616  
+#        -34.647  
+#        -33.608  
+#        -32.659  
+#        -31.839  
+#        -31.620  
+#        -30.691  
+#        -28.683  
+#        -26.914  
+#        -26.644  
+#        -25.945  
+#        -24.946  
+#        -24.686  
+#        -23.937  
+#        -22.938  
+#        -22.688  
+#        -21.939  
+#        -20.950  
+#        -18.622  
+#        -16.964  
+#        -16.664  
+#        -15.695  
+#        -13.687  
+#        -10.690   
+#        -9.881   
+#        -8.692   
+#        -6.704   
+#        -4.705   
+#        -2.687   
+#        -1.978    
+#        1.289    
+#        3.067    
+#        3.267    
+#        8.042    
+#        9.281   
+#        10.030   
+#        11.279   
+#        12.028   
+#        13.287   
+#        14.076   
+#        17.253   
+#        18.003   
+#        18.322   
+#        19.991   
+#        20.251   
+#        20.990   
+#        23.248   
+#        25.256   
+#        27.234   
+#        27.983   
+#        29.282   
+#        31.240   
+#        33.238   
+#        36.035   
+#        38.473   
+#        39.262   
+#        39.472   
+#        40.461   
+#        41.250   
+#        41.470   
+#        42.429   
+#        44.227   
+#        45.656   
+#        46.665   
+#        49.003   
+#        56.016   
+#        63.399   
+#        65.427   
+#        71.371   
+#        72.341   
+#        73.360   
+#        74.329   
+#        75.388   
+#        76.417   
+#        86.397   
+#        90.383   
+#        94.320   
+#        95.398   
+#        96.368   
+#        99.375  
+#        103.351  
+#        113.551  
+#        134.141  
+#        148.118  
+#        151.265  
+#        155.191  
+#        156.050  
+#        158.208  
+#        161.065  
+#        169.028  
+#        176.061  
+#        178.209  
+#        181.116  
+#        182.065  
+#        184.203  
+#        187.220  
+#        193.115  
+#        202.975  
+#        210.967  
+#        215.943  
+#        223.955  
+#        230.928  
+#        237.952  
+#        245.984  
+#        246.004  
+#        252.927  
+#        255.175  
+#        255.175  
+#        259.910  
+#        266.894  
+#        269.901  
+#        277.823  
+#        285.066  
+#        296.995  
+#        298.933  
+#        301.850  
+#        304.847  
+#        307.805  
+#        316.017  
+#        322.760  
+#        324.079  
+#        330.762  
+#        334.869  
+#        338.995  
+#        339.744  
+#        344.749  
+#        357.767  
+#        360.694  
+#        367.717  
+#        375.669  
+#        382.673  
+#        393.652  
+#        406.050  
+#        413.373  
+#        416.061  
+#        419.038  
+#        420.047  
+#        420.057  
+#        427.000  
+#        429.358  
+#        441.306  
+#        442.086  
+#        444.064  
+#        449.988  
+#        459.029  
+#        471.008  
+#        487.962  
+#        496.883  
+#        504.226  
+#        513.847  
+#        518.852  
+#        532.828  
+#        540.901  
+#        561.721  
+#        572.750  
+#        590.703  
+#        594.689  
+#        599.814  
+#        605.788  
+#        624.570  
+#        628.776  
+#        634.761  
+#        634.881  
+#        651.495  
+#        656.450  
+#        660.516  
+#        667.469  
+#        687.410  
+#        701.696  
+#        989.370 
+#        1046.090 
+#        1061.050 
+#        1070.100 
+#        1076.030 
+#        1086.000 
+#        1102.980
+supernova_10:
+    label:'sn1988L'
+    type:'Ib'
+    subtype:'norm'
+#    age:0.000
+#        47.699
+supernova_11:
+    label:'1989B'
+    type:'Ia'
+    subtype:'norm'
+#    age:-7.183   
+#        -1.347    
+#        2.624    
+#        4.589
+#        6.595    
+#        7.283    
+#        8.600   
+#        10.585   
+#        11.563   
+#        12.551   
+#        13.269   
+#        13.558   
+#        15.524   
+#        16.501   
+#        17.499   
+#        18.527   
+#        19.524   
+#        20.482   
+#        21.480   
+#        22.477   
+#        23.485   
+#        24.523   
+#        30.479   
+#        36.435   
+#        48.317   
+#        50.103   
+#        78.117  
+#        151.944  
+#        329.808
+supernova_12:
+    label:'sn1990aa'
+    type:'Ic'
+    subtype:'norm'
+#    age:0.000
+#        61.487
+#        116.088 
+supernova_13:
+    label:'sn1990B'
+    type:'Ic'
+    subtype:'norm'
+#    age:3.970    
+#        4.963    
+#        5.945    
+#        5.955    
+#        6.987    
+#        8.873    
+#        9.945   
+#        15.424   
+#        22.332   
+#        27.622   
+#        28.327   
+#        31.324   
+#        38.709   
+#        41.150   
+#        47.443   
+#        58.351   
+#        64.514   
+#        71.462   
+#        88.007  
+#        100.245  
+#        115.937
+supernova_14:
+    label:'sn1990I'
+    type:'Ib'
+    subtype:'norm'
+#    age:11.348   
+#        19.359   
+#        40.094   
+#        41.084   
+#        51.006   
+#        64.889   
+#        87.704  
+#        234.523 
+supernova_15:
+    label:'sn1990K'
+    type:'II'
+    subtype:'L'
+#    age:0.000   
+#        50.489   
+#        53.293   
+#        55.620   
+#        76.335  
+#        119.136  
+#        136.092  
+#        138.966  
+#        147.021  
+#        160.944  
+#        174.667  
+#        174.697  
+#        201.587  
+#        202.462 
+supernova_16:
+    label:'sn1990N'
+    type:'Ia'
+    subtype:'norm'
+#    age:-14.214   
+#        -7.416    
+#        1.565    
+#        3.867    
+#        6.549   
+#        13.506   
+#        16.676   
+#        20.695   
+#        37.428   
+#        49.561  
+#        159.627  
+#        212.328  
+#        227.050  
+#        244.194  
+#        245.211  
+#        254.879  
+#        279.708  
+#        308.823  
+#        331.479
+supernova_17:
+    label:'sn1990O'
+    type:'Ia'
+    subtype:'norm'
+#    age:-7.568   
+#        -6.598   
+#        -5.579   
+#        -0.864   
+#        12.516   
+#        18.639   
+#        19.434   
+#        26.484   
+#        54.482
+supernova_18:
+    label:'sn1990U'
+    type:'Ic'
+    subtype:'norm'
+#    age:10.914   
+#        11.906   
+#        33.734   
+#        40.679     
+#        69.453   
+#        92.273
+supernova_19:
+    label:'sn1991A'
+    type:'Ic'
+    subtype:'norm'
+#    age:0.000   
+#        10.885   
+#        16.822   
+#        32.575   
+#        47.497   
+#        61.350   
+#        65.061  
+#        128.341
+supernova_20:
+    label:'sn1991ar'
+    type:'Ib'
+    subtype:'norm'
+#    age:0.000   
+#        15.760   
+#        27.413
+supernova_21:
+    label:'sn1991bg'
+    type:'Ia'
+    subtype:'91bg'
+#    age:-0.219    
+#        0.777    
+#        0.947    
+#        1.874    
+#        2.123    
+#        2.133   
+#        14.073   
+#        15.797   
+#        18.049   
+#        18.289   
+#        18.717   
+#        19.564   
+#        25.036   
+#        28.943   
+#        32.082   
+#        33.129   
+#        33.836   
+#        45.687   
+#        45.946   
+#        47.620   
+#        49.942   
+#        52.753   
+#        52.872   
+#        53.919   
+#        87.486  
+#        112.592  
+#        116.598  
+#        116.658  
+#        142.402  
+#        161.546  
+#        202.121
+supernova_22:
+    label:'sn1991M'
+    type:'Ia'
+    subtype:'norm'
+#    age:2.740   
+#        18.386   
+#        24.839   
+#        25.832   
+#        27.540   
+#        30.300   
+#        80.018  
+#        111.797  
+#        137.520  
+#        152.412 
+supernova_23:
+    label:'sn1991N'
+    type:'Ic'
+    subtype:'norm'
+#    age:0.000    
+#        5.741    
+#        6.608    
+#        7.605   
+#        11.961   
+#        27.909  
+#        250.179  
+#        276.094
+supernova_24:
+    label:'sn1991T'
+    type:'Ia'
+    subtype:'91T'
+#    age:-12.836  
+#        -11.693  
+#        -10.848  
+#        -10.678   
+#        -9.853   
+#        -8.700   
+#        -7.735   
+#        -6.682   
+#        -1.541    
+#        6.055    
+#        9.535   
+#        14.506   
+#        17.261   
+#        23.455   
+#        44.335   
+#        45.200   
+#        66.209   
+#        73.825   
+#        81.620  
+#        111.448  
+#        184.030  
+#        259.028  
+#        317.695  
+#        346.455  
+#        346.455
+supernova_25:
+    label:'sn1992A'
+    type:'Ia'
+    subtype:'norm'
+#    age:-5.437   
+#        -0.845    
+#        1.998    
+#        5.486    
+#        5.894    
+#        6.888    
+#        8.239   
+#        11.221   
+#        15.833   
+#        16.826   
+#        23.784   
+#        27.759  
+#        225.046 
+supernova_26:
+    label:'sn1992ar'
+    type:'Ic'
+    subtype:'norm'
+#    age:3.415 
+supernova_27:
+    label:'sn1992H'
+    type:'II'
+    subtype:'P'
+#    age:11.533   
+#        24.458   
+#        44.342  
+#        103.002  
+#        112.944  
+#        129.846  
+#        135.811  
+#        140.782  
+#        265.060  
+#        309.800 
+supernova_28:
+    label:'sn1993ac'
+    type:'Ia'
+    subtype:'norm'
+#    age:6.941   
+#        12.687   
+#        28.640 
+supernova_29:
+    label:'sn1993J'
+    type:'II'
+    subtype:'b'
+#    age:-18.003  
+#        -17.503  
+#        -16.652  
+#        -15.652  
+#        -10.452   
+#        -5.001   
+#        -4.001   
+#        -3.000   
+#        -2.380   
+#        -2.000   
+#        -1.560    
+#        1.440    
+#        2.670    
+#        3.381    
+#        3.651    
+#        3.751    
+#        4.631    
+#        5.501    
+#        6.621   
+#        11.002   
+#        12.002   
+#        13.002   
+#        16.543   
+#        20.413   
+#        24.004   
+#        28.504   
+#        29.974   
+#        31.595   
+#        34.665   
+#        35.005   
+#        35.675   
+#        36.425   
+#        36.666   
+#        37.676   
+#        38.466   
+#        41.396   
+#        62.009   
+#        63.710   
+#        68.010   
+#        70.010   
+#        72.011   
+#        88.013   
+#        94.694   
+#        96.514  
+#        102.015  
+#        118.018  
+#        120.708  
+#        146.022  
+#        150.013  
+#        151.383  
+#        161.024  
+#        186.088  
+#        188.028  
+#        205.031  
+#        211.742  
+#        214.032  
+#        216.462  
+#        235.505  
+#        245.037  
+#        265.040  
+#        277.042  
+#        279.442  
+#        294.044  
+#        325.889  
+#        326.759  
+#        341.671  
+#        347.512  
+#        366.055  
+#        391.799  
+#        412.062  
+#        420.783  
+#        452.068  
+#        502.075  
+#        532.080
+supernova_30:
+    label:'sn1994ae'
+    type:'Ia'
+    subtype:'norm'
+#    age:-0.030    
+#        0.946    
+#        1.952    
+#        2.977    
+#        3.983    
+#        4.968    
+#        7.896    
+#        7.975    
+#        8.971    
+#        9.917   
+#        28.825   
+#        34.789   
+#        38.662   
+#        62.588   
+#        68.612   
+#        86.415   
+#        86.556  
+#        152.000  
+#        366.340
+supernova_31:
+    label:'sn1994D'
+    type:'Ia'
+    subtype:'norm
+#    age:-12.443  
+#        -11.446  
+#        -11.167  
+#        -11.087  
+#        -10.060  
+#        -10.040   
+#        -9.452   
+#        -9.173   
+#        -8.236   
+#        -8.146   
+#        -7.813   
+#        -6.461   
+#        -6.102   
+#        -5.464   
+#        -5.255   
+#        -5.095   
+#        -4.297   
+#        -4.118   
+#        -4.009   
+#        -3.470   
+#        -3.111   
+#        -2.273   
+#        -0.130    
+#        9.622   
+#        10.768   
+#        12.842   
+#        13.874   
+#        14.816   
+#        16.671   
+#        16.890   
+#        19.722   
+#        20.460   
+#        20.689   
+#        23.651   
+#        27.840   
+#        29.433   
+#        39.723   
+#        42.645   
+#        43.392   
+#        45.666   
+#        48.378   
+#        49.375   
+#        49.465   
+#        49.534   
+#        51.369   
+#        53.363   
+#        53.363   
+#        54.560   
+#        55.537   
+#        56.524   
+#        58.528   
+#        72.487   
+#        73.614   
+#        74.521   
+#        82.507   
+#        86.559  
+#        105.211  
+#        114.416  
+#        611.183 
+supernova_32:
+    label:'sn1994I'
+    type:'Ic'
+    subtype:'norm'
+#    age:-5.541   
+#        -5.442   
+#        -3.614   
+#        -2.546   
+#        -1.558   
+#        -0.609    
+#        0.100    
+#        1.328    
+#        2.306    
+#        2.556    
+#        3.495   
+#        21.377   
+#        22.415   
+#        23.394   
+#        24.302   
+#        26.219   
+#        28.326   
+#        30.273   
+#        34.307   
+#        36.224   
+#        37.222   
+#        38.251   
+#        40.188   
+#        56.243 
+supernova_33:
+    label:'sn1994M'
+    type:'Ia'
+    subtype:'norm'
+#    age:1.593    
+#        2.590    
+#        3.655    
+#        4.662    
+#        5.610    
+#        6.558   
+#        11.504   
+#        12.461   
+#        32.703   
+#        39.779 
+supernova_34:
+    label:'sn1994Q'
+    type:'Ia'
+    subtype:'norm'
+#    age:9.948   
+#        10.850   
+#        11.559   
+#        11.783   
+#        12.773   
+#        18.553   
+#        41.613   
+#        49.685   
+#        70.058 
+supernova_35:
+    label:'sn1994S'
+    type:'Ia'
+    subtype:'norm'
+#    age:-3.960   
+#        -2.995    
+#        0.926    
+#        1.023   
+#        20.343   
+#        26.480
+supernova_36:
+    label:'sn1994T'
+    type:'Ia'
+    subtype:'norm'
+#    age:-0.174    
+#        0.773    
+#        0.831    
+#        1.740    
+#        4.678
+supernova_37:
+    label:'sn1995ac'
+    type:'Ia'
+    subtype:'norm'
+#    age:-6.385   
+#        -5.524   
+#        23.926   
+#        24.660   
+#        48.538
+supernova_38:
+    label:'sn1995ak'
+    type:'Ia'
+    subtype:'norm'
+#    age:13.366   
+#        17.356   
+#        22.294   
+#        25.322   
+#        26.087   
+#        50.503   
+#        73.911
+supernova_39:
+    label:'sn1995al'
+    type:'Ia'
+    subtype:'norm'
+#    age:6.418    
+#        8.398   
+#        10.407   
+#        13.313   
+#        15.392   
+#        16.357   
+#        16.377   
+#        18.298   
+#        19.352   
+#        22.262   
+#        25.203   
+#        39.172   
+#        44.177   
+#        67.937   
+#        93.766
+supernova_40:
+    label:'sn1995bd'
+    type:'Ia'
+    subtype:'91T'
+#    age:-11.985  
+#        -10.083   
+#        -9.107   
+#        -7.146   
+#        10.585   
+#        20.432   
+#        36.162   
+#        71.575
+supernova_41:
+    label:'sn1995D'
+    type:'Ia'
+    subtype:'norm'
+#    age:3.556    
+#        3.688    
+#        5.523    
+#        7.490    
+#        9.516   
+#        11.543   
+#        14.503   
+#        16.460   
+#        32.427   
+#        38.194   
+#        42.227   
+#        60.142   
+#        63.991   
+#        68.968   
+#        91.859   
+#        92.858  
+#        274.898  
+#        282.825
+supernova_42:
+    label:'sn1995E'
+    type:'Ia'
+    subtype:'norm'
+#    age:-2.895   
+#        -2.852   
+#        -0.919    
+#        1.018    
+#        3.913    
+#        5.899    
+#        8.854   
+#        31.641   
+#        53.467
+supernova_43:
+    label:'sn1995F'
+    type:'Ic'
+    subtype:'norm'
+#    age:0.000    
+#        0.189    
+#        1.931    
+#        3.952   
+#        10.989   
+#        29.054   
+#        35.743   
+#        35.763   
+#        56.924   
+#        88.775
+supernova_44:
+    label:'sn1996ab'
+    type:'Ia'
+    subtype:'norm'
+#    age:1.264
+supernova_45:
+    label:'sn1996ai'
+    type:'Ia'
+    subtype:'norm'
+#    age:-1.087   
+#        -0.937   
+#        -0.090    
+#        0.140    
+#        1.237    
+#        2.174    
+#        4.158   
+#        15.096   
+#        22.168   
+#        25.017   
+#        49.956
+supernova_46:
+    label:'sn1996bk'
+    type:'Ia'
+    subtype:'norm'
+#    age:2.533
+supernova_47:
+    label:'sn1996bl'
+    type:'Ia'
+    subtype:'norm'
+#    age:-4.044   
+#        -2.220   
+#        13.291   
+#        18.108
+supernova_48:
+    label:'sn1996bo'
+    type:'Ia'
+    subtype:'norm'
+#    age:3.254    
+#        5.191    
+#        7.068    
+#        9.162   
+#        11.118
+supernova_49:
+    label:'sn1996bv'
+    type:'Ia'
+    subtype:'norm'
+#    age:20.052
+#        45.620
+supernova_50:
+    label:'sn1996C'
+    type:'Ia'
+    subtype:'norm'
+#    age:1.957    
+#        4.800    
+#        7.760
+supernova_51:
+    label:'sn1996cb'
+    type:'II'
+    subtype:'b'
+#    age:-17.965  
+#        -16.918   
+#        -2.075    
+#        0.918    
+#        4.988    
+#        6.025    
+#        6.993    
+#        7.920   
+#        26.933   
+#        28.888   
+#        32.818   
+#        36.798   
+#        40.808   
+#        56.679   
+#        67.632   
+#        92.450   
+#        96.579  
+#        101.747  
+#        115.453  
+#        126.685  
+#        129.358  
+#        149.328  
+#        152.620  
+#        177.249  
+#        334.168
+vsupernova_52:
+    label:'sn1996L'
+    type:'II'
+    subtype:'n'
+#    age:8.393   
+#        33.697   
+#        42.226   
+#        58.082   
+#        58.566  
+#        322.840  
+#        323.808
+supernova_53:
+    label:'sn1996X'
+    type:'Ia'
+    subtype:'norm'
+#    age:-3.774   
+#        -2.781   
+#        -1.828   
+#        -1.669   
+#        -0.785    
+#        0.129    
+#        0.189    
+#        1.122    
+#        1.172    
+#        2.175    
+#        7.082    
+#        7.122    
+#        8.105   
+#        11.919   
+#        20.004   
+#        21.733   
+#        21.981   
+#        23.968   
+#        27.931   
+#        30.920   
+#        32.877   
+#        48.739   
+#        55.573   
+#        56.556   
+#        57.768   
+#        86.901  
+#        244.244  
+#        296.241
+supernova_54:
+    label:'sn1996Z'
+    type:'Ia'
+    subtype:'norm'
+#    age:4.120    
+#        6.095    
+#        8.080   
+#        10.075   
+#        14.026   
+#        22.970
+supernova_55:
+    label:'sn1997bp'
+    type:'Ia'
+    subtype:'norm'
+#    age:-3.045   
+#        -1.190   
+#        -0.218    
+#        0.803    
+#        1.805    
+#        2.797    
+#        3.779    
+#        5.912   
+#        18.615   
+#        27.432   
+#        31.468   
+#        49.281   
+#        54.259   
+#        60.210
+supernova_56:
+    label:'sn1997bq'
+    type:'Ia'
+    subtype:'norm'
+#    age:-11.622  
+#        -10.621   
+#        -9.621   
+#        -8.660   
+#        -7.669   
+#        -6.589   
+#        -5.608    
+#        9.215   
+#        11.196   
+#        12.207   
+#        19.113   
+#        40.931   
+#        46.876
+supernova_57:
+    label:'sn1997br'
+    type:'Ia'
+    subtype:'91T'
+#    age:-9.582   
+#        -8.589   
+#        -7.974   
+#        -7.596   
+#        -6.991   
+#        -6.603   
+#        -4.886   
+#        -4.617    
+#        7.199    
+#        7.874    
+#        9.850   
+#        11.856   
+#        16.791   
+#        19.725   
+#        20.753   
+#        23.087   
+#        36.989   
+#        37.624   
+#        41.547   
+#        45.542   
+#        48.488   
+#        49.898   
+#        65.786   
+#        71.317
+supernova_58:
+    label:'sn1997cn'
+    type:'Ia'
+    subtype:'91bg'
+#    age:3.924   
+#        10.946   
+#        11.860   
+#        12.972   
+#        13.975   
+#        14.968   
+#        15.824   
+#        17.859   
+#        18.905   
+#        19.708   
+#        20.800   
+#        21.705   
+#        23.681   
+#        28.707   
+#        43.380
+supernova_59:
+    label:'sn1997cy'
+    type:'II'
+    subtype:'n'
+#    age:0.000   
+#        14.076   
+#        29.440   
+#        57.217   
+#        71.255  
+#        116.792  
+#        125.324  
+#        174.488  
+#        196.072  
+#        226.095  
+#        377.664 
+supernova_60:
+    label:'sn1997dc'
+    type:'Ib'
+    subtype:'norm'
+#    age:0.000
+supernova_61:
+    label:'sn1997dd'
+    type:'II'
+    subtype:'b'
+#    age:0.000
+#        3.595
+#        16.380
+supernova_62:
+    label:'sn1997do'
+    type:'Ia'
+    subtype:'norm'
+#    age:-11.563  
+#        -10.603   
+#        -7.554   
+#        -6.564   
+#        -5.603    
+#        8.227   
+#        10.207   
+#        11.127   
+#        12.107   
+#        14.216   
+#        15.256   
+#        19.988   
+#        20.948   
+#        20.997   
+#        47.776   
+#        74.418
+supernova_63:
+    label:'sn1997dq'
+    type:'Ic'
+    subtype:'broad'
+#    age:0.000    
+#        0.957   
+#        14.941   
+#        17.931   
+#        21.918   
+#        26.871   
+#        27.918   
+#        27.938   
+#        42.819   
+#        54.779   
+#        81.690  
+#        222.227
+supernova_64:
+    label:'sn1997dt'
+    type:'Ia'
+    subtype:'norm'
+#    age:-10.602   
+#        -9.709   
+#        -8.696   
+#        -7.674   
+#        -4.725    
+#        0.238    
+#        2.224   
+#        24.074 
+supernova_65:
+    label:'sn1997E'
+    type:'Ia'
+    subtype:'norm'
+#    age:-3.661   
+#        11.151   
+#        20.003   
+#        20.044   
+#        40.628 
+supernova_66:
+    label:'sn1997ef'
+    type:'Ic'
+    subtype:'broad'
+#    age:-15.034  
+#        -12.919  
+#        -12.030  
+#        -11.120  
+#        -10.142   
+#        -7.176   
+#        -6.217   
+#        -6.119   
+#        -5.199    
+#        5.763   
+#        11.694   
+#        12.692   
+#        14.629   
+#        15.736   
+#        17.496   
+#        18.534   
+#        20.481   
+#        25.453   
+#        36.474   
+#        39.183   
+#        43.176   
+#        45.133   
+#        47.061   
+#        47.347   
+#        73.917   
+#        78.731   
+#        84.909  
+#        103.690 
+supernova_67:
+    label:'sn1997ei'
+    type:'Ic'
+    subtype:'norm'
+#    age:0.000
+#        10.884
+supernova_68:
+    label:'sn1997Y'
+    type:'Ia'
+    subtype:'norm'
+#    age:1.871    
+#        1.929    
+#        2.904    
+#        6.910   
+#        22.541 
+supernova_69:
+    label:'sn1998ab'
+    type:'Ia'
+    subtype:'91T'
+#    age:-7.760    
+#        6.748    
+#        7.731   
+#        17.458   
+#        18.413   
+#        19.396   
+#        20.360   
+#        21.334   
+#        22.327   
+#        33.972   
+#        35.900   
+#        45.657
+supernova_70:
+    label:'sn1998aq'
+    type:'Ia'
+    subtype:'norm'
+#    age:-9.881   
+#        -8.915   
+#        -0.916    
+#        0.050    
+#        1.046    
+#        2.022    
+#        3.028    
+#        4.004    
+#        5.010    
+#        6.026   
+#        17.889   
+#        19.911   
+#        29.892   
+#        30.858   
+#        32.860   
+#        34.882   
+#        49.754   
+#        50.910   
+#        53.758   
+#        56.756   
+#        58.738   
+#        61.716   
+#        64.704   
+#        77.693   
+#        79.716   
+#        80.651   
+#        85.686   
+#        89.606  
+#        229.424  
+#        239.384
+supernova_71:
+    label:'sn1998bp'
+    type:'Ia'
+    subtype:'norm'
+#    age:-2.890   
+#        -1.900   
+#        -0.910    
+#        0.059    
+#        0.990   
+#        12.915   
+#        14.815   
+#        24.820   
+#        25.760   
+#        27.719   
+#        29.649   
+#        45.586
+supernova_72:
+    label:'sn1998bu'
+    type:'Ia'
+    subtype:'norm'
+#    age:-3.580   
+#        -2.583   
+#        -1.576    
+#        8.426    
+#        9.413   
+#        10.400   
+#        11.408   
+#        12.405   
+#        13.422   
+#        27.352   
+#        28.319   
+#        29.316   
+#        29.382   
+#        30.314   
+#        31.311   
+#        32.328   
+#        33.325   
+#        34.332   
+#        35.329   
+#        36.327   
+#        37.324   
+#        38.351   
+#        39.308   
+#        40.305   
+#        41.312   
+#        42.299   
+#        43.297   
+#        56.270   
+#        58.294  
+#        178.262  
+#        189.261  
+#        207.209  
+#        216.124  
+#        234.968  
+#        242.030  
+#        247.825  
+#        278.885  
+#        327.496  
+#        338.574
+supernova_73:
+    label:'sn1998bw'
+    type:'Ic'
+    subtype:'broad'
+#    age:7.832    
+#        8.714   
+#        11.689   
+#        12.680   
+#        13.671   
+#        15.654   
+#        17.746   
+#        18.738   
+#        20.720   
+#        23.695   
+#        25.677   
+#        26.669   
+#        27.551   
+#        33.609   
+#        36.484   
+#        43.423   
+#        59.227   
+#        66.107   
+#        86.926  
+#        138.509  
+#        212.656
+supernova_74:
+    label:'sn1998co'
+    type:'Ia'
+    subtype:'norm'
+#    age:-0.020    
+#        0.962    
+#        3.919    
+#        6.875   
+#        22.530   
+#        24.553   
+#        28.413 
+supernova_75:
+    label:'sn1998de'
+    type:'Ia'
+    subtype:'91bg'
+#    age:-7.151   
+#        -6.157   
+#        -5.193   
+#        -3.177   
+#        -2.233   
+#        -0.315    
+#        2.685   
+#        29.274   
+#        48.802   
+#        73.341
+supernova_76:
+    label:'sn1998dh'
+    type:'Ia'
+    subtype:'norm'
+#    age:-9.398   
+#        -8.447   
+#        -7.455   
+#        -5.433   
+#        -3.490   
+#        -0.555   
+#        18.441   
+#        26.140   
+#        36.136   
+#        40.091   
+#        43.105   
+#        45.008   
+#        46.932   
+#        70.683
+supernova_77:
+    label:'sn1998dk'
+    type:'Ia'
+    subtype:'norm'
+#    age:-6.476    
+#        0.222   
+#        10.185   
+#        11.113   
+#        13.136   
+#        16.106   
+#        18.070   
+#        20.930   
+#        21.011   
+#        22.995   
+#        29.874   
+#        44.585   
+#        44.658
+supernova_78:
+    label:'sn1998dm'
+    type:'Ia'
+    subtype:'norm'
+#    age:-10.803   
+#        -3.931    
+#        6.001    
+#        6.905    
+#        8.991   
+#        11.952   
+#        13.929   
+#        15.896   
+#        16.919   
+#        18.887   
+#        25.811   
+#        40.689   
+#        40.694   
+#        48.662   
+#        81.377
+supernova_79:
+    label:'sn1998dt'
+    type:'Ib'
+    subtype:'norm'
+    
+supernova_80:
+    label:'sn1998dx'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_81:
+    label:'sn1998ec'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_82:
+    label:'sn1998ef'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_83:
+    label:'sn1998eg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_84:
+    label:'sn1998es'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_85:
+    label:'sn1998S'
+    type:'II'
+    subtype:'n'
+
+supernova_86:
+    label:'sn1998T'
+    type:'Ib'
+    subtype:'norm'
+ 
+supernova_87:
+    label:'sn1998V'
+    type:'Ia'
+    subtype:'norm'
+ 
+supernova_88:
+    label:'sn1999aa'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_89:
+    label:'sn1999ac'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_90:
+    label:'sn1999aw'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_91:
+    label:'sn1999bh'
+    type:'Ia'
+    subtype:'91bg'
+ 
+supernova_92:
+    label:'sn1999by'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_93:
+    label:'sn1999cc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_94:
+    label:'sn1999cl'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_95:
+    label:'sn1999cp'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_96:
+    label:'sn1999cw'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_97:
+    label:'sn1999da'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_98:
+    label:'sn1999di'
+    type:'Ib'
+    subtype:'norm'
+
+supernova_99:
+    label:'sn1999dn'
+    type:'Ib'
+    subtype:'norm'
+
+supernova_100:
+    label:'sn1999dq'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_101:
+    label:'sn1999ee'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_102:
+    label:'sn1999ef'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_103:
+    label:'sn1999ej'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_104:
+    label:'sn1999ek'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_105:
+    label:'sn1999em'
+    type:'II'
+    subtype:'P'
+
+supernova_106:
+    label:'sn1999ex'
+    type:'Ib'
+    subtype:'norm'
+
+supernova_107:
+    label:'sn1999gd'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_108:
+    label:'sn1999gh'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_109:
+    label:'sn1999gi'
+    type:'II'
+    subtype:'P'
+
+supernova_110:
+    label:'sn1999gp'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_111:
+    label:'sn1999X'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_112:
+    label:'sn2000B'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_113:
+    label:'sn2000bh'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_114:
+    label:'sn2000bk'
+    type:'Ia'
+    subtype:'norm'
+
+vsupernova_115:
+    label:'sn2000ce'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_116:
+    label:'sn2000cf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_117:
+    label:'sn2000cn'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_118:
+    label:'sn2000cp'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_119:
+    label:'sn2000cu'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_120:
+    label:'sn2000cw'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_121:
+    label:'sn2000cx'
+    type:'Ia'
+    subtype:'pec'
+
+supernova_122:
+    label:'sn2000dg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_123:
+    label:'sn2000dk'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_124:
+    label:'sn2000dm'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_125:
+    label:'sn2000dn'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_126:
+    label:'sn2000E'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_127:
+    label:'sn2000fa'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_128:
+    label:'sn2000H'
+    type:'II'
+    subtype:'b'
+
+supernova_129:
+    label:'sn2001ah'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_130:
+    label:'sn2001ay'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_131:
+    label:'sn2001az'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_132:
+    label:'sn2001bf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_133:
+    label:'sn2001bg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_134:
+    label:'sn2001br'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_135:
+    label:'sn2001cj'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_136:
+    label:'sn2001ck'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_137:
+    label:'sn2001cp'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_138:
+    label:'sn2001da'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_139:
+    label:'sn2001E'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_140:
+    label:'sn2001eh'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_141:
+    label:'sn2001el'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_142:
+    label:'sn2001en'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_143:
+    label:'sn2001ep'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_144:
+    label:'sn2001ex'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_145:
+    label:'sn2001fe'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_146:
+    label:'sn2001fh'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_147:
+    label:'sn2001G'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_148:
+    label:'sn2001gc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_149:
+    label:'sn2001N'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_150:
+    label:'sn2001V'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_151:
+    label:'sn2002ap'
+    type:'Ic'
+    subtype:'broad'
+
+supernova_152:
+    label:'sn2002aw'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_153:
+    label:'sn2002bf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_154:
+    label:'sn2002bo'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_155:
+    label:'sn2002cd'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_156:
+    label:'sn2002cf'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_157:
+    label:'sn2002ck'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_158:
+    label:'sn2002cr'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_159:
+    label:'sn2002cs'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_160:
+    label:'sn2002cu'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_161:
+    label:'sn2002cx'
+    type:'Ia'
+    subtype:'pec'
+
+supernova_162:
+    label:'sn2002de'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_163:
+    label:'sn2002dj'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_164:
+    label:'sn2002dl'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_165:
+    label:'sn2002do'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_166:
+    label:'sn2002dp'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_167:
+    label:'sn2002ef'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_168:
+    label:'sn2002er'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_169:
+    label:'sn2002es'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_170:
+    label:'sn2002eu'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_171:
+    label:'sn2002fb'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_172:
+    label:'sn2002fk'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_173:
+    label:'sn2002G'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_174:
+    label:'sn2002ha'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_175:
+    label:'sn2002hd'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_176:
+    label:'sn2002he'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_177:
+    label:'sn2002hu'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_178:
+    label:'sn2002hw'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_179:
+    label:'sn2002ic'
+    type:'Ia'
+    subtype:'csm'
+
+supernova_180:
+    label:'sn2002jg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_181:
+    label:'sn2002jy'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_182:
+    label:'sn2002kf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_183:
+    label:'sn2003bg'
+    type:'II'
+    subtype:'b'
+
+supernova_184:
+    label:'sn2003cg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_185:
+    label:'sn2003ch'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_186:
+    label:'sn2003cq'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_187:
+    label:'sn2003du'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_188:
+    label:'sn2003fa'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_189:
+    label:'sn2003gn'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_190:
+    label:'sn2003hu'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_191:
+    label:'sn2003hv'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_192:
+    label:'sn2003ic'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_193:
+    label:'sn2003it'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_194:
+    label:'sn2003iv'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_195:
+    label:'sn2003kc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_196:
+    label:'sn2003kf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_197:
+    label:'sn2003U'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_198:
+    label:'sn2003W'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_199:
+    label:'sn2003Y'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_200:
+    label:'sn2004as'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_201:
+    label:'sn2004at'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_202:
+    label:'sn2004aw'
+    type:'Ic'
+    subtype:'norm'
+
+supernova_203:
+    label:'sn2004bd'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_204:
+    label:'sn2004bg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_205:
+    label:'sn2004bk'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_206:
+    label:'sn2004dj'
+    type:'II'
+    subtype:'P'
+
+supernova_207:
+    label:'sn2004dt'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_208:
+    label:'sn2004ef'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_209:
+    label:'sn2004eo'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_210:
+    label:'sn2004et'
+    type:'II'
+    subtype:'P'
+
+supernova_211:
+    label:'sn2004fu'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_212:
+    label:'sn2004fz'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_213:
+    label:'sn2004gc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_214:
+    label:'sn2004gs'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_215:
+    label:'sn2004L'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_216:
+    label:'sn2004S'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_217:
+    label:'sn2005A'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_218:
+    label:'sn2005am'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_219:
+    label:'sn2005bc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_220:
+    label:'sn2005be'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_221:
+    label:'sn2005bf'
+    type:'Ib'
+    subtype:'pec'
+
+supernova_222:
+    label:'sn2005bl'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_223:
+    label:'sn2005bo'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_224:
+    label:'sn2005cc'
+    type:'Ia'
+    subtype:'pec'
+
+supernova_225:
+    label:'sn2005cf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_226:
+    label:'sn2005cg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_227:
+    label:'sn2005cs'
+    type:'II'
+    subtype:'P'
+
+supernova_228:
+    label:'sn2005el'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_229:
+    label:'sn2005eq'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_230:
+    label:'sn2005eu'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_231:
+    label:'sn2005gj'
+    type:'Ia'
+    subtype:'csm'
+
+supernova_232:
+    label:'sn2005hc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_234:
+    label:'sn2005hf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_235:
+    label:'sn2005hj'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_236:
+    label:'sn2005hk'
+    type:'Ia'
+    subtype:'pec'
+
+supernova_237:
+    label:'sn2005iq'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_238:
+    label:'sn2005kc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_239:
+    label:'sn2005ke'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_240:
+    label:'sn2005ki'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_241:
+    label:'sn2005kl'
+    type:'Ic'
+    subtype:'norm'
+
+vsupernova_242:
+    label:'sn2005ls'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_243:
+    label:'sn2005lu'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_244:
+    label:'sn2005M'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_245:
+    label:'sn2005mc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_246:
+    label:'sn2005mz'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_247:
+    label:'sn2005na'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_248:
+    label:'sn2006ac'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_249:
+    label:'sn2006aj'
+    type:'Ic'
+    subtype:'broad'
+
+supernova_250:
+    label:'sn2006ak'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_251:
+    label:'sn2006al'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_252:
+    label:'sn2006ax'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_253:
+    label:'sn2006az'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_254:
+    label:'sn2006bp'
+    type:'II'
+    subtype:'P'
+
+supernova_255:
+    label:'sn2006bq'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_256:
+    label:'sn2006br'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_257:
+    label:'sn2006bt'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_258:
+    label:'sn2006bw'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_259:
+    label:'sn2006bz'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_260:
+    label:'sn2006cc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_261:
+    label:'sn2006cf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_262:
+    label:'sn2006cj'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_263:
+    label:'sn2006cm'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_264:
+    label:'sn2006cp'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_265:
+    label:'sn2006cq'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_266:
+    label:'sn2006cz'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_267:
+    label:'sn2006D'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_268:
+    label:'sn2006em'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_269:
+    label:'sn2006eq'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_270:
+    label:'sn2006et'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_271:
+    label:'sn2006eu'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_272:
+    label:'sn2006ev'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_273:
+    label:'sn2006gj'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_274:
+    label:'sn2006gr'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_275:
+    label:'sn2006gt'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_276:
+    label:'sn2006gz'
+    type:'Ia'
+    subtype:'pec'
+
+supernova_277:
+    label:'sn2006H'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_278:
+    label:'sn2006hb'
+    type:'Ia'
+    subtype:'bg'
+
+supernova_279:
+    label:'sn2006kf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_280:
+    label:'sn2006le'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_281:
+    label:'sn2006lf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_282:
+    label:'sn2006mo'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_283:
+    label:'sn2006N'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_284:
+    label:'sn2006nz'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_285:
+    label:'sn2006oa'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_286:
+    label:'sn2006ot'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_287:
+    label:'sn2006S'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_288:
+    label:'sn2006sr'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_289:
+    label:'sn2006te'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_290:
+    label:'sn2006X'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_291:
+    label:'sn2007A'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_292:
+    label:'sn2007ae'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_293:
+    label:'sn2007af'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_294:
+    label:'sn2007al'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_295:
+    label:'sn2007ap'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_296:
+    label:'sn2007au'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_297:
+    label:'sn2007ax'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_298:
+    label:'sn2007ba'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_299:
+    label:'sn2007bc'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_300:
+    label:'sn2007bd'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_301:
+    label:'sn2007bj'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_302:
+    label:'sn2007bm'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_303:
+    label:'sn2007bz'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_304:
+    label:'sn2007ca'
+    type:'Ia'
+    subtype:'norm'
+
+vsupernova_305:
+    label:'sn2007cg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_306:
+    label:'sn2007ci'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_307:
+    label:'sn2007co'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_308:
+    label:'sn2007cq'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_309:
+    label:'sn2007F'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_310:
+    label:'sn2007fb'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_311:
+    label:'sn2007fs'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_312:
+    label:'sn2007hj'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_313:
+    label:'sn2007if'
+    type:'Ia'
+    subtype:'pec'
+
+supernova_314:
+    label:'sn2007jg'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_315:
+    label:'sn2007kk'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_316:
+    label:'sn2007le'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_317:
+    label:'sn2007nq'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_318:
+    label:'sn2007qe'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_319:
+    label:'sn2007S'
+    type:'Ia'
+    subtype:'91T'
+
+supernova_320:
+    label:'sn2007sr'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_321:
+    label:'sn2007ux'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_322:
+    label:'sn2007Y'
+    type:'Ib'
+    subtype:'norm'
+
+supernova_323:
+    label:'sn2008A'
+    type:'Ia'
+    subtype:'pec'
+
+supernova_324:
+    label:'sn2008ae'
+    type:'Ia'
+    subtype:'pec'
+
+supernova_325:
+    label:'sn2008af'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_326:
+    label:'sn2008ar'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_327:
+    label:'sn2008bf'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_328:
+    label:'sn2008C'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_329:
+    label:'sn2008D'
+    type:'Ib'
+    subtype:'pec'
+
+supernova_330:
+    label:'sn2008L'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_331:
+    label:'sn2008Q'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_332:
+    label:'sn2008R'
+    type:'Ia'
+    subtype:'91bg'
+
+supernova_333:
+    label:'sn2008z'
+    type:'Ia'
+    subtype:'norm'
+
+supernova_334:
+    label:'snls03D3bb'
+    type:'Ia'
+    subtype:'pec'
