@@ -372,7 +372,7 @@ supernova_10:
 #    age:0.000
 #        47.699
 supernova_11:
-    label:'1989B'
+    label:'sn1989B'
     type:'Ia'
     subtype:'norm'
 #    age:-7.183   
@@ -1086,7 +1086,7 @@ supernova_51:
 #        152.620  
 #        177.249  
 #        334.168
-vsupernova_52:
+supernova_52:
     label:'sn1996L'
     type:'II'
     subtype:'n'
@@ -1745,7 +1745,7 @@ supernova_114:
     type:'Ia'
     subtype:'norm'
 
-vsupernova_115:
+supernova_115:
     label:'sn2000ce'
     type:'Ia'
     subtype:'norm'
@@ -2335,507 +2335,507 @@ supernova_232:
     type:'Ia'
     subtype:'norm'
 
-supernova_234:
+supernova_233:
     label:'sn2005hf'
     type:'Ia'
     subtype:'norm'
 
-supernova_235:
+supernova_234:
     label:'sn2005hj'
     type:'Ia'
     subtype:'91T'
 
-supernova_236:
+supernova_235:
     label:'sn2005hk'
     type:'Ia'
     subtype:'pec'
 
-supernova_237:
+supernova_236:
     label:'sn2005iq'
     type:'Ia'
     subtype:'norm'
 
-supernova_238:
+supernova_237:
     label:'sn2005kc'
     type:'Ia'
     subtype:'norm'
 
-supernova_239:
+supernova_238:
     label:'sn2005ke'
     type:'Ia'
     subtype:'91bg'
 
-supernova_240:
+supernova_239:
     label:'sn2005ki'
     type:'Ia'
     subtype:'norm'
 
-supernova_241:
+supernova_240:
     label:'sn2005kl'
     type:'Ic'
     subtype:'norm'
 
-vsupernova_242:
+supernova_241:
     label:'sn2005ls'
     type:'Ia'
     subtype:'norm'
 
-supernova_243:
+supernova_242:
     label:'sn2005lu'
     type:'Ia'
     subtype:'norm'
 
-supernova_244:
+supernova_243:
     label:'sn2005M'
     type:'Ia'
     subtype:'91T'
 
-supernova_245:
+supernova_244:
     label:'sn2005mc'
     type:'Ia'
     subtype:'norm'
 
-supernova_246:
+supernova_245:
     label:'sn2005mz'
     type:'Ia'
     subtype:'91bg'
 
-supernova_247:
+supernova_246:
     label:'sn2005na'
     type:'Ia'
     subtype:'norm'
 
-supernova_248:
+supernova_247:
     label:'sn2006ac'
     type:'Ia'
     subtype:'norm'
 
-supernova_249:
+supernova_248:
     label:'sn2006aj'
     type:'Ic'
     subtype:'broad'
 
-supernova_250:
+supernova_249:
     label:'sn2006ak'
     type:'Ia'
     subtype:'norm'
 
-supernova_251:
+supernova_250:
     label:'sn2006al'
     type:'Ia'
     subtype:'norm'
 
-supernova_252:
+supernova_251:
     label:'sn2006ax'
     type:'Ia'
     subtype:'norm'
 
-supernova_253:
+supernova_252:
     label:'sn2006az'
     type:'Ia'
     subtype:'norm'
 
-supernova_254:
+supernova_253:
     label:'sn2006bp'
     type:'II'
     subtype:'P'
 
-supernova_255:
+supernova_254:
     label:'sn2006bq'
     type:'Ia'
     subtype:'norm'
 
-supernova_256:
+supernova_255:
     label:'sn2006br'
     type:'Ia'
     subtype:'norm'
 
-supernova_257:
+supernova_256:
     label:'sn2006bt'
     type:'Ia'
     subtype:'norm'
 
-supernova_258:
+supernova_257:
     label:'sn2006bw'
     type:'Ia'
     subtype:'norm'
 
-supernova_259:
+supernova_258:
     label:'sn2006bz'
     type:'Ia'
     subtype:'91bg'
 
-supernova_260:
+supernova_259:
     label:'sn2006cc'
     type:'Ia'
     subtype:'norm'
 
-supernova_261:
+supernova_260:
     label:'sn2006cf'
     type:'Ia'
     subtype:'norm'
 
-supernova_262:
+supernova_261:
     label:'sn2006cj'
     type:'Ia'
     subtype:'norm'
 
-supernova_263:
+supernova_262:
     label:'sn2006cm'
     type:'Ia'
     subtype:'norm'
 
-supernova_264:
+supernova_263:
     label:'sn2006cp'
     type:'Ia'
     subtype:'norm'
 
-supernova_265:
+supernova_264:
     label:'sn2006cq'
     type:'Ia'
     subtype:'norm'
 
-supernova_266:
+supernova_265:
     label:'sn2006cz'
     type:'Ia'
     subtype:'91T'
 
-supernova_267:
+supernova_266:
     label:'sn2006D'
     type:'Ia'
     subtype:'norm'
 
-supernova_268:
+supernova_267:
     label:'sn2006em'
     type:'Ia'
     subtype:'91bg'
 
-supernova_269:
+supernova_268:
     label:'sn2006eq'
     type:'Ia'
     subtype:'norm'
 
-supernova_270:
+supernova_269:
     label:'sn2006et'
     type:'Ia'
     subtype:'norm'
 
-supernova_271:
+supernova_270:
     label:'sn2006eu'
     type:'Ia'
     subtype:'norm'
 
-supernova_272:
+supernova_271:
     label:'sn2006ev'
     type:'Ia'
     subtype:'norm'
 
-supernova_273:
+supernova_272:
     label:'sn2006gj'
     type:'Ia'
     subtype:'norm'
 
-supernova_274:
+supernova_273:
     label:'sn2006gr'
     type:'Ia'
     subtype:'norm'
 
-supernova_275:
+supernova_274:
     label:'sn2006gt'
     type:'Ia'
     subtype:'91bg'
 
-supernova_276:
+supernova_275:
     label:'sn2006gz'
     type:'Ia'
     subtype:'pec'
 
-supernova_277:
+supernova_276:
     label:'sn2006H'
     type:'Ia'
     subtype:'91bg'
 
-supernova_278:
+supernova_277:
     label:'sn2006hb'
     type:'Ia'
     subtype:'bg'
 
-supernova_279:
+supernova_278:
     label:'sn2006kf'
     type:'Ia'
     subtype:'norm'
 
-supernova_280:
+supernova_279:
     label:'sn2006le'
     type:'Ia'
     subtype:'norm'
 
-supernova_281:
+supernova_280:
     label:'sn2006lf'
     type:'Ia'
     subtype:'norm'
 
-supernova_282:
+supernova_281:
     label:'sn2006mo'
     type:'Ia'
     subtype:'norm'
 
-supernova_283:
+supernova_282:
     label:'sn2006N'
     type:'Ia'
     subtype:'norm'
 
-supernova_284:
+supernova_283:
     label:'sn2006nz'
     type:'Ia'
     subtype:'norm'
 
-supernova_285:
+supernova_284:
     label:'sn2006oa'
     type:'Ia'
     subtype:'91T'
 
-supernova_286:
+supernova_285:
     label:'sn2006ot'
     type:'Ia'
     subtype:'norm'
 
-supernova_287:
+supernova_286:
     label:'sn2006S'
     type:'Ia'
     subtype:'norm'
 
-supernova_288:
+supernova_287:
     label:'sn2006sr'
     type:'Ia'
     subtype:'norm'
 
-supernova_289:
+supernova_288:
     label:'sn2006te'
     type:'Ia'
     subtype:'norm'
 
-supernova_290:
+supernova_289:
     label:'sn2006X'
     type:'Ia'
     subtype:'norm'
 
-supernova_291:
+supernova_290:
     label:'sn2007A'
     type:'Ia'
     subtype:'norm'
 
-supernova_292:
+supernova_291:
     label:'sn2007ae'
     type:'Ia'
     subtype:'norm'
 
-supernova_293:
+supernova_292:
     label:'sn2007af'
     type:'Ia'
     subtype:'norm'
 
-supernova_294:
+supernova_293:
     label:'sn2007al'
     type:'Ia'
     subtype:'91bg'
 
-supernova_295:
+supernova_294:
     label:'sn2007ap'
     type:'Ia'
     subtype:'norm'
 
-supernova_296:
+supernova_295:
     label:'sn2007au'
     type:'Ia'
     subtype:'norm'
 
-supernova_297:
+supernova_296:
     label:'sn2007ax'
     type:'Ia'
     subtype:'91bg'
 
-supernova_298:
+supernova_297:
     label:'sn2007ba'
     type:'Ia'
     subtype:'91bg'
 
-supernova_299:
+supernova_298:
     label:'sn2007bc'
     type:'Ia'
     subtype:'norm'
 
-supernova_300:
+supernova_299:
     label:'sn2007bd'
     type:'Ia'
     subtype:'norm'
 
-supernova_301:
+supernova_300:
     label:'sn2007bj'
     type:'Ia'
     subtype:'norm'
 
-supernova_302:
+supernova_301:
     label:'sn2007bm'
     type:'Ia'
     subtype:'norm'
 
-supernova_303:
+supernova_302:
     label:'sn2007bz'
     type:'Ia'
     subtype:'norm'
 
-supernova_304:
+supernova_303:
     label:'sn2007ca'
     type:'Ia'
     subtype:'norm'
 
-vsupernova_305:
+supernova_304:
     label:'sn2007cg'
     type:'Ia'
     subtype:'norm'
 
-supernova_306:
+supernova_305:
     label:'sn2007ci'
     type:'Ia'
     subtype:'norm'
 
-supernova_307:
+supernova_306:
     label:'sn2007co'
     type:'Ia'
     subtype:'norm'
 
-supernova_308:
+supernova_307:
     label:'sn2007cq'
     type:'Ia'
     subtype:'91T'
 
-supernova_309:
+supernova_308:
     label:'sn2007F'
     type:'Ia'
     subtype:'norm'
 
-supernova_310:
+supernova_309:
     label:'sn2007fb'
     type:'Ia'
     subtype:'norm'
 
-supernova_311:
+supernova_310:
     label:'sn2007fs'
     type:'Ia'
     subtype:'norm'
 
-supernova_312:
+supernova_311:
     label:'sn2007hj'
     type:'Ia'
     subtype:'norm'
 
-supernova_313:
+supernova_312:
     label:'sn2007if'
     type:'Ia'
     subtype:'pec'
 
-supernova_314:
+supernova_313:
     label:'sn2007jg'
     type:'Ia'
     subtype:'norm'
 
-supernova_315:
+supernova_314:
     label:'sn2007kk'
     type:'Ia'
     subtype:'norm'
 
-supernova_316:
+supernova_315:
     label:'sn2007le'
     type:'Ia'
     subtype:'norm'
 
-supernova_317:
+supernova_316:
     label:'sn2007nq'
     type:'Ia'
     subtype:'norm'
 
-supernova_318:
+supernova_317:
     label:'sn2007qe'
     type:'Ia'
     subtype:'norm'
 
-supernova_319:
+supernova_318:
     label:'sn2007S'
     type:'Ia'
     subtype:'91T'
 
-supernova_320:
+supernova_319:
     label:'sn2007sr'
     type:'Ia'
     subtype:'norm'
 
-supernova_321:
+supernova_320:
     label:'sn2007ux'
     type:'Ia'
     subtype:'norm'
 
-supernova_322:
+supernova_321:
     label:'sn2007Y'
     type:'Ib'
     subtype:'norm'
 
-supernova_323:
+supernova_322:
     label:'sn2008A'
     type:'Ia'
     subtype:'pec'
 
-supernova_324:
+supernova_323:
     label:'sn2008ae'
     type:'Ia'
     subtype:'pec'
 
-supernova_325:
+supernova_324:
     label:'sn2008af'
     type:'Ia'
     subtype:'norm'
 
-supernova_326:
+supernova_325:
     label:'sn2008ar'
     type:'Ia'
     subtype:'norm'
 
-supernova_327:
+supernova_326:
     label:'sn2008bf'
     type:'Ia'
     subtype:'norm'
 
-supernova_328:
+supernova_327:
     label:'sn2008C'
     type:'Ia'
     subtype:'norm'
 
-supernova_329:
+supernova_328:
     label:'sn2008D'
     type:'Ib'
     subtype:'pec'
 
-supernova_330:
+supernova_329:
     label:'sn2008L'
     type:'Ia'
     subtype:'norm'
 
-supernova_331:
+supernova_330:
     label:'sn2008Q'
     type:'Ia'
     subtype:'norm'
 
-supernova_332:
+supernova_331:
     label:'sn2008R'
     type:'Ia'
     subtype:'91bg'
 
-supernova_333:
+supernova_332:
     label:'sn2008z'
     type:'Ia'
     subtype:'norm'
 
-supernova_334:
+supernova_333:
     label:'snls03D3bb'
     type:'Ia'
     subtype:'pec'

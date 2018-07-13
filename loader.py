@@ -28,7 +28,8 @@ class Loader(object):
         flux = np.asarray(flux)
 
         return wave, flux
-
+    def template_loader(self,direct, filename):
+        template_file = np.genfromtxt(os.path.join(direct, filename))
 class Binning(object):
     def __init__(self, wave):
         
@@ -86,7 +87,7 @@ class Binning(object):
                     continue
                 flux_ = flux[i] / (ln_s1 - ln_s0) * dnu
                 ln_flux[j] = ln_flux[j] + flux_
-        ln_flux = (ln_flux - min(ln_flux)) / (max(ln_flux) - min(ln_flux))
+#        ln_flux = (ln_flux - min(ln_flux)) / (max(ln_flux) - min(ln_flux))
         return ln_flux, self.ln_wave, self.N
 
 

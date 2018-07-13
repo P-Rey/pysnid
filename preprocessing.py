@@ -20,14 +20,15 @@ import scipy.fftpack as fft
 class Preproccess(object):
     
     def __init__(self,wave,flux,percent):
-        self.p = int(len(wave)/13)
+        self.p = int(len(wave)/10)
         self.percent = percent
         self.N = len(wave)
         self.flux = flux
         self.wave = wave
         
     def Apodize(self):
-#       apodizes the flux signal using UnivariateSpline 
+#       apodizes the flux signal using UnivariateSpline
+        self.flux = self.flux - np.mean(self.flux)
         b_pntarr = self.flux[::self.p]              
                                                     #   essentially divides each spectra into 13 points     #
         a_pntarr = self.wave[::self.p]              
@@ -35,8 +36,11 @@ class Preproccess(object):
         spl = UnivariateSpline(a_pntarr, b_pntarr)  #   creates a 13 point spline funciton this is a smooth function that is analogous to the continuum background #
         spl_b=spl(self.wave)                        #   applies this to the wave function                                                                          #
         b_2=self.flux-spl_b                         #   removes the spline (read: continuum background) from the flux data                                         #
-        Mean=np.mean(b_2)                           #   finds the mean value of the spline function                                                                #
-        self.SignalSplined=b_2-Mean                 #   takes the mean away from the signal, making the mean value zero                                            #
+#        Mean=np.mean(b_2)                           #   finds the mean value of the spline function                                                                #
+#        self.SignalSplined=b_2-Mean                 #   takes the mean away from the signal, making the mean value zero                                            #
+        self.SignalSplined = b_2
+
+        
         return self.SignalSplined
     
     def Hann(self):
@@ -56,6 +60,7 @@ class Preproccess(object):
         return self.ProcessedSig
     
     def Filter(self):
+        #self.ProcessedSig = self.Apodize()
         self.ProcessedSig = self.Hann()
         dft=fft.fft(self.ProcessedSig)
         

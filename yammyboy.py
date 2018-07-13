@@ -10,11 +10,15 @@ def yaml_dump(filepath, data):
         yaml.dump(data, file_descriptor)
 
 if __name__ == "__main__":
-    filepath = "example.yml"
+    filepath ="template_directory.yml"
     data = yaml_loader(filepath)
-    print(data)
+
+#    suffix = str(i)
+    
     path = "supernova_"+str(1)
     items = data.get(path)
-    lhs,rhs = items.split("type:",1)
-#    for item_name, item_value in items.iteritems():
-#         print(item_name, item_value)
+    junk, rhs= items.split("label:", 1)
+    sn_type, junk = rhs.split("type:", 1)
+    del junk
+#    fuck, this = lhs.split(":",1)
+#    lhs1,rhs1 = rhs.split("subtype:",1)

@@ -17,16 +17,18 @@ Created on Wed May 30 12:02:01 2018
 #   for every array in order to find how well they correlate to one another                #
 #                                                                                          #
 ############################################################################################
-#import matplotlib.pyplot as plt
-#import numpy as np
-#import pandas as pd
-
-#from preprocessing import Process as pr
+'''
+"1999em_19991119_3292_10074_00.dat"
+"sn2011fe_0928_all_cor.txt"
+'''
+import matplotlib.pyplot as plt
 import loader
 import preprocessing
 import Correlate
-#import cross_corr
+import numpy as np
+
 #################################################################################################
+
 ld=loader.Loader()
 
 def Loadin(filename):
@@ -35,41 +37,47 @@ def Loadin(filename):
     ln_flux,ln_wave,N = bn.ln_bin_flux(wave,flux)   
     return wave,flux,ln_wave,ln_flux,N
 
-wave,flux,ln_wave,ln_flux,N = Loadin("2004et_20041027_3299_9327_00.dat")
-wavep01,fluxp01,ln_wavep01,ln_fluxp01,Np01 = Loadin("sn2011fe_0928_all_cor.txt")
-#plt.plot(ln_wave,ln_flux,ln_wavep01,ln_fluxp01)
-"1999em_19991119_3292_10074_00.dat"
-"sn2011fe_0928_all_cor.txt"
+wave,flux,ln_wave,ln_flux,N = Loadin("1999em_19991119_3292_10074_00.dat")
+wavep01,fluxp01,ln_wavep01,ln_fluxp01,Np01 = Loadin("2004et_20041027_3299_9327_00.dat")
+
+
 def Preprommm(wave,flux):
     percent = 0.5
     pr = preprocessing.Preproccess(wave,flux,percent)
     filtered_sig = pr.Filter()
     return filtered_sig
 
-filtered_sig = Preprommm(wave,flux)
-filtered_sigp01 = Preprommm(wavep01, fluxp01)
+filtered_sig = Preprommm(wave,ln_flux)
+#filtered_sigp01 = Preprommm(wavep01, ln_fluxp01)
 
 def Correl8(usrwave, usrinput,templatewave,template):
     corr = Correlate.Correlate(usrwave, usrinput, templatewave, template)
 #    new_wave, reggie, new_wave_temp, bush = corr.region()
-#    print(usrwave[0], usrwave[-1])
-#    print(new_wave[0],new_wave[-1])
-#    print(templatewave[0], templatewave[-1])
-#    print(new_wave_temp[0],new_wave_temp[-1])
     correl, h, lap = corr.get_corr()
     plt.plot(correl)
     plt.figure()
     r = corr.get_r()
-#    lap = corr.get_lap()
-    print("r", r)
-    print("lap", lap)
+#    print("r", r)
+#    print("lap", lap)
     rlap = r * lap
     return rlap
-rlap = Correl8(wave, filtered_sig, wavep01, filtered_sigp01)
+
+#rlap = Correl8(wave, filtered_sig, wavep01, filtered_sigp01)
+#rlap_29 = Correl8(wave, filtered_sig, wave_29[1:], flux_29[1:])
+    
+import template_reader
+tp = template_reader.template(wave, filtered_sig)
+
+rlap_array = tp.template_findr()
+
 #plt.figure()
 #plt.plot(interp)
 #cr = cross_corr.Correlate(ln_wave,ln_wave,ln_flux,ln_flux)
 #r_list = cr.correlate()
+
+
+
+###################################################################################################
 #wave04, flux04, ln_wave04, ln_flux04, n04 =           ld.Load("2004et_20041027_3299_9327_00.dat")
 #wave04p1, flux04p1, ln_wave04p1, ln_flux04p1, n04p1 = ld("d2004et_20041027_3299_9327_00_0p1.dat")
 #wave04p2, flux04p2, ln_wave04p2, ln_flux04p2, n04p2 = ld("d2004et_20041027_3299_9327_00_0p2.dat")

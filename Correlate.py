@@ -45,7 +45,12 @@ class Correlate():
         new_flux_template = self.template[idx_start_template:idx_end_template]
         new_wave_template = self.template_wave[idx_start_template:idx_end_template]
         lap = self.get_lap(new_wave)
-        #plt.plot(new_wave,new_flux,new_wave_template,new_flux)
+#        plt.plot(new_wave,new_flux)
+#        plt.figure()
+#        plt.plot(new_wave_template,new_flux_template)
+#        plt.figure()
+#        print(new_wave_template[0], new_wave_template[-1])
+#        print(new_wave[0], new_wave[-1])
         return new_flux, new_flux_template, lap
     
     def get_corr(self):
@@ -58,8 +63,8 @@ class Correlate():
         
         self.corr = np.correlate(new_flux, new_flux_template, "full")
         self.CORR = self.corr / ( np.std(inputdft) * np.std(templatedft))
-        plt.figure()
-        plt.plot(self.CORR)
+#        plt.figure()
+#        plt.plot(self.CORR)
 #        plt.savefig("2004etv2011fe_corr.png")
 #        plt.xlim(490,550)
         self.h = max(self.CORR)
@@ -92,18 +97,18 @@ class Correlate():
             autocorr[i-1] = self.CORR[-i] - self.CORR[i-1]
         
         rmsa = np.std(autocorr)
-        plt.plot(autocorr)        
-        plt.plot(a_n)
-
-        plt.figure()
+#        plt.plot(autocorr)        
+#        plt.plot(a_n)
+#
+#        plt.figure()
         return rmsa
     
     def get_r(self):
         
         rmsA = self.get_rmsa()
         ### VVVVVV ###
-        print("h", self.h)
-        print("rmsa", rmsA)
+#        print("h", self.h)
+#        print("rmsa", rmsA)
         if rmsA == 0.0:
             r = float(np.inf)
         else:
