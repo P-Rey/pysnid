@@ -18,7 +18,7 @@ class template():
         self.flux_usr = flux_usr
         self.sn_array = []
         
-    def template_loader(self):
+    def get_sn_names(self):
 
         with open(self.filepath, "r") as file_descriptor:
             
@@ -33,38 +33,68 @@ class template():
             sn_type, junk = sn_type.split("'", 1)
             del junk
             self.sn_array = np.append(self.sn_array,sn_type)
-#            print('here?')
+
         return self.sn_array
     
     def template_findr(self):
-#        print('what?')
-        array_names = self.template_loader()
-#        print(len(array_names))
+        array_names = self.get_sn_names()
+        print(len(array_names)) # only 333
         for i in range(len(array_names)):
-            
+            print(i)
+            print(array_names[i])
             text = np.loadtxt(os.path.join(str(self.directory_location), str(array_names[i])+'.lnw'))
-#            print(os.path.join(str(self.directory_location), str(array_names[i])+'.lnw'))
             text = text.T
+#            print(text)
             wave = text[0]
             rlap_array = np.zeros(len(text))
-            rlap_top = np.zeros(len(array_names))
-            print(len(text)) #new for each template
+            rlap_top = []
+#            print(len(text)) #new for each template
             for j in range(1,len(text)):
-                
+                print(j)
                 flux = text[j]
                 corr = Correlate.Correlate(self.wave_usr, self.flux_usr, wave,flux)
                 correlate, h, lap = corr.get_corr()
                 r = corr.get_r()
                 rlap = r * lap
-                print(rlap)
+#                print(rlap)
                 rlap_array = np.append(rlap_array, rlap)
+                #print(rlap_array)
                 return rlap_array
+            
             rlap_top = np.append(rlap_top, rlap_array)
-            print(len(rlap_top))
-            return rlap_top
+#            print(len(rlap_top))
         return rlap_top
+    
+    def template_correlate(self,sn_name):
+        text = np.loadtxt(os.path.join(str(self.directory_location), str(sn_name)+'.lnw'))
+        text = text.T
+        wave = text[0]
+        rlap_list = []
+        N = len(text)
+        for i in range(1,N):
+#            print(N)
+#            print(i)
+            flux = text[i]
+            corr = Correlate.Correlate(self.wave_usr, self.flux_usr, wave,flux)
+            correlate, h, lap = corr.get_corr()
+#            print(h)
+            r = corr.get_r()
+            rlap = r * lap
+#            print(r)
+            rlap_list = np.append(rlap_list,rlap)
+        return rlap_list
 
-
+    def template_loop(self):
+        sn_names = self.get_sn_names()
+        rlap_list = []
+        for i in range(len(sn_names)):
+#            print(len(sn_names))
+#            print(i)
+            rlap = self.template_correlate(sn_names[i])
+            rlap_list = np.append(rlap_list, rlap)
+        return rlap_list
+        
+        
 #p=1
 #
 #flux_1 = text[1] + p * 1

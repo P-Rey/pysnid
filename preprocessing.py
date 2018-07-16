@@ -20,7 +20,7 @@ import scipy.fftpack as fft
 class Preproccess(object):
     
     def __init__(self,wave,flux,percent):
-        self.p = int(len(wave)/10)
+        self.p = int(len(wave)/13)
         self.percent = percent
         self.N = len(wave)
         self.flux = flux
@@ -39,7 +39,6 @@ class Preproccess(object):
 #        Mean=np.mean(b_2)                           #   finds the mean value of the spline function                                                                #
 #        self.SignalSplined=b_2-Mean                 #   takes the mean away from the signal, making the mean value zero                                            #
         self.SignalSplined = b_2
-
         
         return self.SignalSplined
     
@@ -60,7 +59,7 @@ class Preproccess(object):
         return self.ProcessedSig
     
     def Filter(self):
-        #self.ProcessedSig = self.Apodize()
+        self.ProcessedSig = self.Apodize()
         self.ProcessedSig = self.Hann()
         dft=fft.fft(self.ProcessedSig)
         

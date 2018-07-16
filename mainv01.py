@@ -26,7 +26,12 @@ import loader
 import preprocessing
 import Correlate
 import numpy as np
-
+import template_reader
+#################################################################################################
+#   16/07/2018 To Do:
+#   why is the rlap range 1-4.5 not 0-inf?
+#   ^look at precrocessing and correlate, all the h's seem small 
+#   maybe use ~4.0 as cutoff and see what sn and times match 
 #################################################################################################
 
 ld=loader.Loader()
@@ -48,11 +53,11 @@ def Preprommm(wave,flux):
     return filtered_sig
 
 filtered_sig = Preprommm(wave,ln_flux)
-#filtered_sigp01 = Preprommm(wavep01, ln_fluxp01)
+filtered_sigp01 = Preprommm(wavep01, ln_fluxp01)
 
 def Correl8(usrwave, usrinput,templatewave,template):
     corr = Correlate.Correlate(usrwave, usrinput, templatewave, template)
-#    new_wave, reggie, new_wave_temp, bush = corr.region()
+    new_wave, reggie, new_wave_temp, bush = corr.region()
     correl, h, lap = corr.get_corr()
     plt.plot(correl)
     plt.figure()
@@ -65,10 +70,9 @@ def Correl8(usrwave, usrinput,templatewave,template):
 #rlap = Correl8(wave, filtered_sig, wavep01, filtered_sigp01)
 #rlap_29 = Correl8(wave, filtered_sig, wave_29[1:], flux_29[1:])
     
-import template_reader
-tp = template_reader.template(wave, filtered_sig)
-
-rlap_array = tp.template_findr()
+tp = template_reader.template(wavep01, filtered_sigp01)
+rlap_list = tp.template_loop()
+#rlap_array = tp.template_findr()
 
 #plt.figure()
 #plt.plot(interp)
