@@ -1,10 +1,12 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Thu Sep 13 09:53:14 2018
 
 @author: Peter
 """
-
+import sys
+sys.path.append("~/pysnid(1)/pysnis-master/pysnid.py")
 from matplotlib.backends.backend_tkagg import (
     FigureCanvasTkAgg, NavigationToolbar2TkAgg)
 ## Implement the default Matplotlib key bindings.
@@ -13,7 +15,13 @@ from matplotlib.figure import Figure
 import tkinter as tk
 from matplotlib import style
 import matplotlib.backends.backend_tkagg as tkagg
+import argparse 
+import reader
+import logtrim
+import apodise
+import correlator
 
+LARGE_FONT= ("Verdana", 12)
     
 class SeaofBTCapp(tk.Tk):
 
@@ -83,23 +91,26 @@ class StartPage(tk.Frame):
 
 
 if __name__ == "__main__":
-    
-    import reader
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input_spec")
+    args = parser.parse_args()
+    spectrumfilename = args.input_spec
     template_spectrum = reader.readspec('SN2011fe_2011-08-25_00-00-00_TNG_DOLORES_PTF.ascii')
-    input_spectrum = reader.parsereadspec()
-    import apodise.apodiser as ap
-    apodised_input_spectrum = ap.apodise(input_spectrum)
-    apodised_template_spectrum = ap.apodise(template_spectrum)  
-    import logtrim
+    input_spectrum = reader.readspec(spectrumfilename)
+
+    apodised_input_spectrum = apodise.apodise(input_spectrum)
+    apodised_template_spectrum = apodise.apodise(template_spectrum)  
+
     input_limits = logtrim.getspeclimits(apodised_input_spectrum)
     template_limits = logtrim.getspeclimits(apodised_template_spectrum)
     log_input_spectrum = logtrim.logspec(apodised_input_spectrum)
     log_template_spectrum = logtrim.logspec(apodised_template_spectrum)
     log_input_spectrum, log_template_spectrum = logtrim.logspectrim(log_input_spectrum, log_template_spectrum, input_limits, template_limits)
-    import correlator
+
     correlation, rlap = correlator.correlate_spec(log_input_spectrum, log_template_spectrum)
-    
-    
-    LARGE_FONT= ("Verdana", 12)
+        
+        
+
     app = SeaofBTCapp()
     app.mainloop()

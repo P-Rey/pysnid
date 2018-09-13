@@ -48,21 +48,21 @@ z = (np.exp( delta*dwlog )-1)
 '''
 
 
-def calc_redshift_from_crosscorr(crossCorr, nw, dwlog):
-    deltaPeak = np.argmax(crossCorr)
-    print("deltaPeak",deltaPeak)
+#def calc_redshift_from_crosscorr(crossCorr, nw, dwlog):
+#    deltaPeak = np.argmax(crossCorr)
+#    print("deltaPeak",deltaPeak)
     # z = np.exp(deltaPeak * dwlog) - 1 #equation 13 of Blondin)
-    zAxisIndex = np.concatenate((np.arange(-nw / 2, 0), np.arange(0, nw / 2)))
-    print("zAxisIndex ",zAxisIndex )
+#    zAxisIndex = np.concatenate((np.arange(-nw / 2, 0), np.arange(0, nw / 2)))
+#    print("zAxisIndex ",zAxisIndex )
 #    plt.figure()
 #    plt.plot(zAxisIndex)
-    print("nw",nw/2)
-
-    if deltaPeak < nw / 2:
-        z = (np.exp(abs(zAxisIndex) * dwlog) - 1)[deltaPeak]
-    else:
-        z = -(np.exp(abs(zAxisIndex) * dwlog) - 1)[deltaPeak]
-
-    return z
+#    print("nw",nw/2)
+#
+#    if deltaPeak < nw / 2:
+#        z = (np.exp(abs(zAxisIndex) * dwlog) - 1)[deltaPeak]
+#    else:
+#        z = -(np.exp(abs(zAxisIndex) * dwlog) - 1)[deltaPeak]
+#
+#    return z
 #dwlog = np.log(wavep01[-1]/wavep01[0]) / len(wavep01)
-redshift = calc_redshift_from_crosscorr(correlation, len(log_wave), dwlog)
+#redshift = calc_redshift_from_crosscorr(correlation, len(log_wave), dwlog)

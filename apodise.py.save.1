@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep 12 17:34:35 2018
+
+@author: Peter
+"""
+from scipy import interpolate, fftpack, signal
+import numpy as np
+# Function to Fourier filter spectra
+
+class apodiser():
+        
+    def fftspec(spectrum):
+    
+        fft = fftpack.fft(spectrum[:,1])
+        filtered_fft = fft.copy()
+        filtered_fft[100:]=0    # Can play around with this value (100) to filter more or less
+        filtered_spectrum = fftpack.ifft(filtered_fft)
+        spectrum[:,1] = filtered_spectrum
+        
+        return spectrum
+    
+    # Function to fit a spline to a spectrum and return a spectrum normalised
+    # about zero
+    def splinespec(spectrum):
+    
+        spline_fit = interpolate.UnivariateSpline(spectrum[:,0],spectrum[:,1])
+        normalised_spectrum = (spectrum[:,1]/spline_fit(spectrum[:,0]))-1
+    
+        spectrum[:,1] =  normalised_spectrum
+        return spectrum
+    
+    def mfilt (spectrum):
+        filter = np.ones(len(spectrum))
+        length =len(spectrum)
+        for i in range(0,int(length*0.1)):
+            filter[i] = i/(length*0.1)
+        for i in range(int(length*0.90),length):
+            filter[i] =  (float(length-i)/((length-(length*0.90))+1))
+            
+        return filter    
+    
+    def hanwin(spectrum):
+        endlength = int(0.05*len(spectrum))
+        cosine = signal.hann(endlength*2)
+        hann = np.ones(len(spectrum))
+        hann[0:endlength] = cosine[0:endlength]
+        hann[-endlength:] = cosine[endlength:endlength*2]
+        hann = spectrum * hann
+        return hann
+    
+#    def apodise(spectrum):
+spectrum = splinespec(spectrum)
+spectrum = fftspec(spectrum)
+spectrum = mfilt(spectrum)
+spectrum = hanwin(spectrum)
+        return spectrum

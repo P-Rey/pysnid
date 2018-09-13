@@ -27,6 +27,7 @@ def logspec(spectrum):
 # Function to return shortest and longest wavelengths in spectrum
 # Output of this is required by logspectrim
 def getspeclimits(spectrum):
+    print(spectrum[0,0])
     spec_lambda_blue = spectrum[0,0]
     spec_lambda_red  = spectrum[-1,0]
 
