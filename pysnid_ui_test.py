@@ -48,6 +48,10 @@ def parsereadspec():
     spectrum = np.array(spectrum)
     return spectrum
 
+def fitsreadspec():
+    spectrum = 1
+    return spectrum 
+
 # Function to resample spectrum onto grid of log wavelengths
 # We have a grid from ln(lambda) = 7.0 to 10.0, with 0.001 steps
 # This has 3000 bins between approx 1100 Ang to 2.2 um, covering 
@@ -180,16 +184,21 @@ input_spectrum=splinespec(input_spectrum)
 template_spectrum=splinespec(template_spectrum)
 
 # Fourier filter out high frequency noise
-input_spectrum=fftspec(input_spectrum)
-template_spectrum=fftspec(template_spectrum)
+filtered_input_spectrum=fftspec(input_spectrum)
+filtered_template_spectrum=fftspec(template_spectrum)
 
 # Put onto log wavelength scale
-log_input_spectrum = logspec(input_spectrum)
-log_template_spectrum = logspec(template_spectrum)
+log_input_spectrum = logspec(filtered_input_spectrum)
+log_template_spectrum = logspec(filtered_template_spectrum)
 
 # Trim spectra so that we remove unnecessary padding at extrema
 log_input_spectrum, log_template_spectrum = logspectrim(log_input_spectrum, log_template_spectrum, input_limits, template_limits)
 
+print("log0",input_spectrum.shape, input_spectrum[0,0])#:,0])#.log_input_spectrum[0])
+
+print(input_spectrum[-1,0])
+
+lap = np.log(log_input_spectrum[-1,0]/log_input_spectrum[0,0])
 
 plt.plot(log_input_spectrum[:,0], log_input_spectrum[:,2])
 plt.plot(log_template_spectrum[:,0], log_template_spectrum[:,2])
@@ -229,6 +238,28 @@ leng = (len(correlation))
 print ((leng/2)-maxi)
 print (leng/2)
 
+a_n = np.zeros(len(correlation))
+
+for j in range(1, int(len(correlation))):
+    a_n[j] = correlation[-j] - correlation[j-1]
+
+rmsA = np.std(a_n[:int(len(a_n)/2)])
+
+h = max( correlation )
+r = h / ( np.sqrt(2) * rmsA )
+
+
+
+#lap = np.log(log_input_spectrum[:,-1]/log_input_spectrum[:,0])
+
+rlap =  r * lap
+
+rlap = str(rlap)
+rmsA = str(rmsA)
+h = str(h)
+lap = str(lap)
+
+
 ###################################################################
 import tkinter as tk 
 import matplotlib.backends.backend_tkagg as tkagg
@@ -261,15 +292,7 @@ def rlappopup():
     T.pack()
     S.config(command=T.yview)
     T.config(yscrollcommand=S.set)
-    quote = """HAMLET: To be, or not to be--that is the question:
-    Whether 'tis nobler in the mind to suffer
-    The slings and arrows of outrageous fortune
-    Or to take arms against a sea of troubles
-    And by opposing end them. To die, to sleep--
-    No more--and by a sleep to say we end
-    The heartache, and the thousand natural shocks
-    That flesh is heir to. 'Tis a consummation
-    Devoutly to be wished."""
+    quote = str("rlap: " + rlap + ", rmsA: " + rmsA + ", h: " + h + ", lap: " + lap)
 #    T.insert()
     T.insert(tk.END, quote)
     B1 = ttk.Button(root, text="Okay", command = root.destroy)
