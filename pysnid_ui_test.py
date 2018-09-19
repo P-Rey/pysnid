@@ -339,7 +339,7 @@ class Application(tk.Tk):
         canvas = FigureCanvasTkAgg(fig, master=container)  # A tk.DrawingArea.
         canvas.draw()
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=0)
-        tkagg.NavigationToolbar2Tk(canvas, container)
+        tkagg.NavigationToolbar2Tk(canvas, container) # NavigationToolbar2Tk is the most up-to-date versionj, many users may be using an older version of tkagg
         
         OPTIONS = [
         'sn1980K',
