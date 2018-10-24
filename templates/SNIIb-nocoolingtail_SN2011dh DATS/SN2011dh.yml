@@ -1,0 +1,67 @@
+SN2011dh:
+    - name: 'SN2011dh'
+    - type: 'IIb'
+    - subtype: 'IIb - nocoolingtail'
+    - MJDREF: 2455731.88
+    - MJDREFERR: 1
+    - redshift: 0.00200
+    - spec_1: '2011dh_2011-06-03_21-44-38_HET_HET-LRS_None.txt' #ref 1
+        - specMJD_1: 2455716.41
+    - spec_: '2011dh_2011-06-05_22-03-03_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455718.42
+    - spec_: '2011dh_2011-06-06_21-36-15_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455719.40
+    - spec_: '2011dh_2011-06-08_21-15-29_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455721.39
+    - spec_: '2011dh_2011-06-08_22-53-54_WHT-4.2m_ISIS_None.txt'	
+        - specMJD_: 2455721.45
+    - spec_: '2011dh_2011-06-10_01-33-06_WHT-4.2m_ISIS_None.txt'
+        - specMJD_: 2455722.57
+    - spec_: '2011dh_2011-06-12_21-05-34_WHT-4.2m_ISIS_None.txt'
+        - specMJD_: 2455725.38
+    - spec_: '2011dh_2011-06-17_22-45-03_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455730.45
+    - spec_: '2011dh_2011-06-20_22-02-15_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455733.42
+    - spec_: '2011dh_2011-06-25_23-49-25_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455738.49
+    - spec_: '2011dh_2011-06-30_21-38-43_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455743.40
+    - spec_: '2011dh_2011-07-05_21-36-00_NOT_ALFOSC_None.txt'	
+        - specMJD_: 2455748.40
+    - spec_: '2011dh_2011-07-10_21-57-26_NOT_ALFOSC_None.txt'		
+        - specMJD_: 2455753.41
+    - spec_: '2011dh_2011-07-14_21-28-00_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455757.39
+    - spec_: '2011dh_2011-07-14_22-28-16_Galileo_BC-Asi_None.txt'
+        - specMJD_: 2455757.41
+    - spec_: '2011dh_2011-07-19_21-17-05_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455762.39
+    - spec_: '2011dh_2011-07-22_21-42-48_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455765.40
+    - spec_: '2011dh_2011-08-06_21-14-57_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455780.39
+    - spec_: '2011dh_2011-08-28_20-59-21_Galileo_BC-Asi_None.txt'
+        - specMJD_: 2455802.37
+    - spec_: '2011dh_2011-08-30_20-31-40_WHT-4.2m_ISIS_None.txt'
+        - specMJD_: 2455804.36 
+    - spec_: '2011dh_2011-09-23_20-26-14_WHT-4.2m_ISIS_None.txt' #ref: 2
+        - specMJD_: 2455828.35 
+    - spec_: '2011dh_2011-10-30_03-32-05_Ekar_AFOSC_None.txt'
+        - specMJD_: 2455864.65
+    - spec_: '2011dh_2011-11-28_06-32-00_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455893.76
+    - spec_: '2011dh_2011-12-03_05-57-41_NOT_ALFOSC_None.txt'
+        - specMJD_: 2455897.76
+    - spec_: '2011dh_2011-12-19_04-20-17_WHT-4.2m_ISIS_None.txt'
+        - specMJD_: 	2455914.70
+    - spec_: '2011dh_2012-01-25_02-50-38_NOT_ALFOSC_None.txt'		
+        - specMJD_: 2455951.64 
+    - spec_: '2011dh_2012-03-18_00-00-00_NOT_ALFOSC_None.txt'
+        - specMJD_: 2456005.62
+    - spec_: '2011dh_2012-03-27_03-22-15_WHT-4.2m_ISIS_None.txt'
+        - specMJD_: 2456013.14 
+
+References:
+    - ref1: 'http://adsabs.harvard.edu/abs/2014A%26A...562A..17E'
+    - ref2: 'http://adsabs.harvard.edu/abs/2015A%26A...580A.142E'
