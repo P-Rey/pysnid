@@ -1,0 +1,22 @@
+SN2010gx:
+    - name: 'SN2010gx'
+    - type: 'SLSN - Ic'
+    - subtype: 'SLSN - Ic - 10gx'
+    - MJDREF: 2455283.0
+    - MJDREFERR: 2.0
+    - redshift: 0.23
+    - spec_1: '2010gx_2010-03-21_00-00-00_NOT_ALFOSC_None.txt'		
+        - specMJD_1: 2455276.70
+    - spec_: '2010gx_2010-03-22_00-00-00_Gemini-S_GMOS-S_None.txt' 
+        - specMJD_: 2455277.80	
+    - spec_: '2010gx_2010-04-01_00-00-00_WHT-4.2m_ISIS_None.txt'     
+        - specMJD_: 2455287.52
+    - spec_: '2010gx_2010-04-09_00-00-00_Gemini-S_GMOS-S_None.txt'
+        - specMJD_: 2455295.56
+    - spec_: '2010gx_2010-04-22_00-00-00_Gemini-S_GMOS-S_None.txt'
+        - specMJD_: 2455308.61
+    - spec_: '2010gx_2010-05-02_00-00-00_WHT-4.2m_ISIS_None.txt'
+        - specMJD_: 2455319.47
+    - spec_: '2010gx_2010-06-05_00-00-00_Gemini-S_GMOS-S_None.txt'
+        - specMJD_: 2455352.54
+Refernce: 'http://adsabs.harvard.edu/abs/2010ApJ...724L..16P'

@@ -1,0 +1,22 @@
+name		= SN2010gx
+type        = SLSN-Ic
+subtyep     = SLSN-Ic-10gx
+t_ref_type  = Bmax
+JD_ref  	= 2455283.0
+JD_ref_err	= 2.0
+z      		= 0.23
+
+Filename												JD_spec		Ref
+2010gx_2010-03-21_00-00-00_NOT_ALFOSC_None.fits			2455276.70	1	
+2010gx_2010-03-22_00-00-00_Gemini-S_GMOS-S_None.fits    2455277.80	1	
+2010gx_2010-04-01_00-00-00_WHT-4.2m_ISIS_None.fits      2455287.52	1	
+2010gx_2010-04-09_00-00-00_Gemini-S_GMOS-S_None.fits    2455295.56	1	
+2010gx_2010-04-22_00-00-00_Gemini-S_GMOS-S_None.fits    2455308.61	1	
+2010gx_2010-05-02_00-00-00_WHT-4.2m_ISIS_None.fits      2455319.47	1	
+2010gx_2010-06-05_00-00-00_Gemini-S_GMOS-S_None.fits    2455352.54	1	
+
+
+# References
+1	http://adsabs.harvard.edu/abs/2010ApJ...724L..16P
+
+
