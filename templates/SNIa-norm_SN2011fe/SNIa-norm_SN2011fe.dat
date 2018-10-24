@@ -1,0 +1,45 @@
+name		= SN2011fe
+type        = Ia
+subtyep     = Ia-norm
+t_ref_type  = Bmax
+JD_ref  	= 2455815.01
+JD_ref_err	= 0.06
+z      		= 0.000804
+
+Filename		JD_spec		Ref
+11feM152.fit  	2455799.8	1
+11feM143.fit  	2455800.7	1
+11feM133.fit  	2455801.7	1
+11feM122.fit  	2455802.8	1
+11feM113.fit  	2455803.7	1
+11feM103.fit  	2455804.7	1
+11feM093.fit  	2455805.7	1
+11feM083.fit  	2455806.7	1
+11feM072.fit  	2455807.8	1
+11feM063.fit  	2455808.7	1
+11feM053.fit  	2455809.7	1
+11feM013.fit  	2455813.7	1
+11feM003.fit  	2455814.7	1
+11feP007.fit  	2455815.7	1
+11feP017.fit  	2455816.7	1
+11feP027.fit  	2455817.7	1
+11feP037.fit  	2455818.7	1
+11feP067.fit  	2455821.7	1
+11feP087.fit  	2455823.7	1
+11feP117.fit  	2455826.7	1
+11feP137.fit  	2455828.7	1
+11feP167.fit  	2455831.7	1
+11feP187.fit  	2455833.7	1
+11feP217.fit  	2455836.7	1
+11feP237.fit  	2455838.7	1
+11feP741.fit  	2455889.1	1
+11feP771.fit  	2455892.1	1
+11feP791.fit  	2455894.1	1
+11feP821.fit  	2455897.1	1
+11feP871.fit  	2455902.1	1
+11feP891.fit  	2455904.1	1
+11feP971.fit  	2455912.1	1
+
+
+# References
+1	http://adsabs.harvard.edu/abs/2013A%26A...554A..27P
